@@ -10,6 +10,7 @@ import demo.domain.MyJsonData;
 import demo.domain.User;
 import demo.service.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -28,9 +29,16 @@ public class TestUserController {
     public Object user(@PathVariable String name){
         User user = userMapper.findUserByName(name,"1");
         MyJsonData myJsonData=new MyJsonData();
-        myJsonData.setData(user);
-        myJsonData.setCode("0");
-        myJsonData.setMsg("查询成功");
+        if(user!=null){
+             myJsonData.setData(user);
+             myJsonData.setCode(HttpStatus.OK.toString());
+            myJsonData.setMsg("");
+        }else{
+            myJsonData.setData("");
+            myJsonData.setCode(HttpStatus.NOT_FOUND.toString());
+            myJsonData.setMsg("用户信息不存在！");
+        }
+
         return myJsonData;
     }
 
