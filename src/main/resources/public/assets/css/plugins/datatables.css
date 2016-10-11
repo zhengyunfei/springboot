@@ -1,0 +1,127 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.dataTable {
+  clear: both;
+  margin-top: 10px;
+}
+.dataTables_length label label {
+  line-height: 29px;
+}
+.dataTables_length label select,
+.dataTables_length label .select2-container {
+  margin-right: 5px;
+}
+.dataTables_filter {
+  text-align: right;
+}
+.dataTables_paginate .pagination {
+  margin: 2px 0;
+}
+.dataTables_footer {
+  padding-top: 5px;
+}
+.widget-content.no-padding .dataTables_header {
+  padding: 12px 0;
+  border-bottom: 1px solid #dddddd;
+  background-color: #fafafa;
+}
+.widget-content.no-padding .dataTable {
+  margin-top: 0;
+}
+.widget-content.no-padding .dataTables_footer {
+  padding: 12px 0;
+  border-top: 1px solid #dddddd;
+  background-color: #f9f9f9;
+}
+/* * * * * * * * * * * *
+ * Processing
+ * * * * * * * * * * * */
+.dataTables_processing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 250px;
+  margin-left: -125px;
+  margin-top: -4px;
+  padding: 0;
+  border: 1px solid #dddddd;
+  text-align: center;
+  color: #6f6f6f;
+  font-size: 12px;
+  background-color: white;
+  line-height: 45px;
+}
+/* * * * * * * * * * * *
+ * TableTools & ColVis
+ * * * * * * * * * * * */
+.DTTT,
+.ColVis {
+  float: right;
+  margin-left: 10px;
+}
+.ColVis_collection {
+  border-bottom: 1px solid #d9d9d9;
+}
+.ColVis_collection .ColVis_Button {
+  background-color: #f9f9f9;
+  border: 1px solid #d9d9d9;
+  border-bottom: none;
+  padding: 5px;
+  text-align: left;
+  color: #6f6f6f;
+}
+.ColVis_collection .ColVis_Button .ColVis_radio {
+  padding-right: 5px;
+}
+.ColVis_collection .ColVis_Button:hover {
+  background-color: #fff;
+  color: #000;
+}
+/* * * * * * * * * * * *
+ * Search
+ * * * * * * * * * * * */
+.dataTables_filter .input-group {
+  width: 250px;
+}
+@media (max-width: 767px) {
+  .dataTables_filter .input-group {
+    width: 100%;
+  }
+}
+/* * * * * * * * * * * *
+ * Responsive
+ * * * * * * * * * * * */
+table.has-columns-hidden > tbody > tr > td > span.responsiveExpander {
+  background: url('../../../plugins/datatables/responsive/img/plus.png') no-repeat 5px center;
+  padding-left: 32px;
+  cursor: pointer;
+}
+table.has-columns-hidden > tbody > tr.detail-show > td span.responsiveExpander {
+  background: url('../../../plugins/datatables/responsive/img/minus.png') no-repeat 5px center;
+}
+table.has-columns-hidden > tbody > tr.row-detail > td {
+  background: #eee;
+}
+table.has-columns-hidden > tbody > tr.row-detail > td > ul {
+  list-style: none;
+  margin: 0;
+}
+table.has-columns-hidden > tbody > tr.row-detail > td > ul > li > span.columnTitle {
+  font-weight: bold;
+}
+/* * * * * * * * * * * *
+ * Horizontal Scrolling
+ * * * * * * * * * * * */
+.dataTables_scrollBody > .dataTable {
+  margin-top: 0;
+}

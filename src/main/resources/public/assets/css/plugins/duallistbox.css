@@ -1,0 +1,68 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.dual-control .btn {
+  padding: 0 8px;
+  line-height: 24px;
+  font-size: 11px;
+  cursor: pointer;
+  color: #999;
+  height: 26px;
+  margin: 2px 1px;
+}
+.left-box,
+.right-box {
+  width: 40%;
+  position: relative;
+}
+.left-box .multiple,
+.right-box .multiple {
+  height: 300px;
+  margin-top: 15px;
+}
+.left-box {
+  float: left;
+}
+.right-box {
+  float: right;
+}
+.filter {
+  position: absolute;
+  right: 2px;
+  top: 4px;
+  font-size: 12px;
+  background: none;
+  border: none;
+  color: gray;
+}
+.dual-control {
+  text-align: center;
+  width: 90px;
+  margin: 80px 1px;
+  position: absolute;
+  left: 50%;
+  margin-left: -45px;
+}
+.count-label {
+  color: gray;
+  font-style: italic;
+  display: block;
+}
+.box-filter {
+  width: 100%;
+  font-size: 12px !important;
+  min-height: 30px;
+  margin-bottom: 0 !important;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}

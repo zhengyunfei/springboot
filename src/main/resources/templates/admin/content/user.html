@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<title>header</title>
+</head>
+
+<body>
+	<div id="content" th:fragment="content">
+		<div class="container">
+			<!-- Breadcrumbs line -->
+			<div class="crumbs">
+				<ul id="breadcrumbs" class="breadcrumb">
+					<li><i class="icon-home"></i> <a href="index.html">仪表盘</a></li>
+					<li class="current"><a href="pages_calendar.html" title="">日历</a>
+					</li>
+				</ul>
+
+				<ul class="crumb-buttons">
+					<li><a href="charts.html" title=""><i class="icon-signal"></i><span>统计</span></a></li>
+					<li class="dropdown"><a href="#" title=""
+						data-toggle="dropdown"><i class="icon-tasks"></i><span>用户
+								<strong>(+3)</strong>
+						</span><i class="icon-angle-down left-padding"></i></a>
+						<ul class="dropdown-menu pull-right">
+							<li><a href="form_components.html" title=""><i
+									class="icon-plus"></i>Add new User</a></li>
+							<li><a href="tables_dynamic.html" title=""><i
+									class="icon-reorder"></i>Overview</a></li>
+						</ul></li>
+					<li class="range"><a href="#"> <i class="icon-calendar"></i>
+							<span></span> <i class="icon-angle-down"></i>
+					</a></li>
+				</ul>
+			</div>
+			<!-- /Breadcrumbs line -->
+
+			<!--=== Page Header ===-->
+			<div class="page-header">
+				<div class="page-title">
+					<h3>用户管理</h3>
+					<span th:inline="text">欢迎使用，[[${#httpServletRequest.remoteUser}]]!</span>
+				</div>
+
+				<!-- Page Stats -->
+				<ul class="page-stats">
+					<li>
+						<div class="summary">
+							<span>新订单</span>
+							<h3>17,561</h3>
+						</div>
+						<div id="sparkline-bar" class="graph sparkline hidden-xs">20,15,8,50,20,40,20,30,20,15,30,20,25,20</div>
+						<!-- Use instead of sparkline e.g. this:
+							<div class="graph circular-chart" data-percent="73">73%</div>
+							-->
+					</li>
+					<li>
+						<div class="summary">
+							<span>我的余额</span>
+							<h3>$21,561.21</h3>
+						</div>
+						<div id="sparkline-bar2" class="graph sparkline hidden-xs">20,15,8,50,20,40,20,30,20,15,30,20,25,20</div>
+					</li>
+				</ul>
+				<!-- /Page Stats -->
+			</div>
+			<!-- /Page Header -->
+
+			<!--=== Page Content ===-->
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="widget box">
+						<div class="widget-header">
+							<h4>
+								<i class="icon-reorder"></i> 用户列表
+							</h4>
+							<div class="toolbar no-padding">
+								<div class="btn-group">
+									<span class="btn btn-xs 查看更多-collapse"><i
+										class="icon-angle-down"></i></span>
+								</div>
+							</div>
+						</div>
+						<div class="查看更多-content no-padding">
+							<table id="grid-data"
+								class="table table-condensed table-hover table-striped"
+								data-toggle="bootgrid" data-ajax="true"
+								data-url="/api/getUserList">
+								<thead>
+									<tr>
+										<th data-column-id="id" data-type="numeric"
+											data-identifier="true">ID</th>
+										<th data-column-id="username">用户名</th>
+										<th data-column-id="image">头像</th>
+										<th data-column-id="enabled">启用/禁用</th>
+										<th data-column-id="role">角色</th>
+									</tr>
+								</thead>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+			<link href="/plugins/bootgrid/jquery.bootgrid.min.css"
+				rel="stylesheet" />
+			<script src="/plugins/bootgrid/jquery.bootgrid.min.js"></script>
+			<script type="text/javascript">
+				$("#grid-data").bootgrid({
+					ajax : true,
+					caseSensitive : false
+				});
+			</script>
+			<!-- /.row -->
+			<!-- /Page Content -->
+		</div>
+		<!-- /.container -->
+
+	</div>
+
+</body>
+</html>

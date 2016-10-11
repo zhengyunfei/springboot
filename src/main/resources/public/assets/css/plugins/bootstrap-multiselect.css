@@ -1,0 +1,50 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.multiselect-container {
+  position: absolute;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.multiselect-container input[type="text"] {
+  width: 70%;
+}
+.multiselect-container .input-prepend {
+  padding: 3px;
+}
+.multiselect-container > li {
+  padding: 0;
+}
+.multiselect-container > li > a {
+  padding-bottom: 7px;
+}
+.multiselect-container > li > a.multiselect-all label {
+  font-weight: bold;
+}
+.multiselect-container > li > a > label {
+  margin: 0;
+  padding: 3px 20px 3px 20px;
+  height: 100%;
+  cursor: pointer;
+}
+.multiselect-container > li > a > label:hover {
+  cursor: pointer;
+}
+.multiselect-container > li > a > label.multiselect-header {
+  margin: 0;
+  padding: 3px 20px 3px 20px;
+  height: 100%;
+}
+.multiselect-container > li > a > label > input[type="checkbox"] {
+  margin-bottom: 5px;
+}

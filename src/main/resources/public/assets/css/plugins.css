@@ -1,0 +1,28 @@
+/* ========================================================
+*
+* Melon - Flat & Responsive Admin Template
+*
+* ========================================================
+*
+* File: plugins.css
+* Description: Contains styles for plugins, if you don't use any of plugins, you can remove its styling
+* Version: 1.0
+*
+* ======================================================== */
+
+@import url('plugins/jquery-ui.css');
+@import url('plugins/daterangepicker.css');
+@import url('plugins/uniform.css');
+@import url('plugins/tagsinput.css');
+@import url('plugins/select2.css');
+@import url('plugins/duallistbox.css');
+@import url('plugins/datatables_bootstrap.css');
+@import url('plugins/datatables.css');
+@import url('plugins/pickadate.css');
+@import url('plugins/bootstrap-colorpicker.css');
+@import url('plugins/typeahead.css');
+@import url('plugins/fullcalendar.css');
+@import url('plugins/nestable.css');
+@import url('plugins/bootstrap-wysihtml5.css');
+@import url('plugins/bootstrap-multiselect.css');
+@import url('plugins/nprogress.css');

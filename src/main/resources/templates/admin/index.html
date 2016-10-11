@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head th:replace="admin/layouts/header :: header(title=管理首页)">
+</head>
+<body>
+	<div th:replace="admin/layouts/top :: top">...</div>
+	<div id="container">
+		<div th:replace="admin/layouts/sidebar :: sidebar">...</div>
+		<div th:replace="admin/content/index :: content">...</div>
+	</div>
+</body>
+</html>

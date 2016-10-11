@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+<meta charset="UTF-8" />
+<title>Welcome</title>
+</head>
+<body>
+	<h1 th:inline="text">你好 [[${#httpServletRequest.remoteUser}]]!</h1>
+	<p>点击 <a th:href="@{/hello}">这里</a> 打开“网页”认证.</p>
+	<p>点击 <a th:href="@{/api/i/users/list}">这里</a> 打开“httpBasic”认证.</p>
+</body>
+</html>
