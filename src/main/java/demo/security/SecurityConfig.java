@@ -39,7 +39,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 	@Order(1)
 	public static class ApiWebSecurityConfigurationAdapter extends WebSecurityConfigurerAdapter {
 		protected void configure(HttpSecurity http) throws Exception {
-			//http.antMatcher("/api/i/**").authorizeRequests().anyRequest().hasRole("USER").and().httpBasic().and().csrf()	.disable();
+			http.antMatcher("/api/i/**").authorizeRequests().anyRequest().hasRole("USER").and().httpBasic().and().csrf()	.disable();
 		}
 	}
 
@@ -51,7 +51,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 		protected void configure(HttpSecurity http) throws Exception {
 			// http.httpBasic().disable();//启用redis需要启用此行
 			http.authorizeRequests()
-					.antMatchers("/api/create", "/", "/assets/**", "/plugins/**", "/static/**", "/bootstrap/**",
+					.antMatchers( "/u/","/", "/assets/**", "/plugins/**", "/static/**", "/bootstrap/**",
 							"/api-docs/**", "/debug/**", "/api/**","/dist/**","/public/")
 					.permitAll().antMatchers("/admin/**").hasRole("ADMIN").anyRequest().authenticated().and()
 					.formLogin().loginPage("/login").permitAll().and().logout().permitAll().and().csrf().disable();

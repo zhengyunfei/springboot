@@ -37,10 +37,8 @@ public class SwaggerConfig {
 	private ApiInfo apiInfo() {
 		ApiInfo apiInfo = new ApiInfo(
 				"财富街APP开发接口API文档",
-				"/api/××× 直接使用，不需要登录；<br>"
-						+ "/api/i/××× 需要使用HTTP Basic登录，或提供x-auth-token<br>"
-						+ "包含参数Parameters Data Type=Pageable时，有三个通用参数可以使用,比如：size=20&page=0&sort=popular,desc，"
-						+ "默认：size=20表明每页20行，page=0第几页，sort=popular,desc(asc默认正序，desc倒序)",
+				"测试环境url前缀:http://172.168.7.10:8090；<br>"
+						+ "正式环境url前缀http://www.pestreet.cn<br>",
 				null, null, null, null);
 		return apiInfo;
 	}

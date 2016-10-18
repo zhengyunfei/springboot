@@ -1,8 +1,13 @@
 package demo.controller;
 
-import javax.servlet.http.HttpServletRequest;
-import javax.validation.Valid;
-
+import com.wordnik.swagger.annotations.Api;
+import com.wordnik.swagger.annotations.ApiOperation;
+import demo.domain.User;
+import demo.domain.UserCreateForm;
+import demo.message.Message;
+import demo.repository.UserRepository;
+import demo.service.UserService;
+import demo.validator.UserCreateFormValidator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,36 +20,22 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
-import org.springframework.web.bind.annotation.InitBinder;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.wordnik.swagger.annotations.Api;
-import com.wordnik.swagger.annotations.ApiOperation;
-
-import demo.domain.User;
-import demo.domain.UserCreateForm;
-import demo.message.Message;
-import demo.repository.UserRepository;
-import demo.service.UserService;
-import demo.validator.UserCreateFormValidator;
+import javax.servlet.http.HttpServletRequest;
+import javax.validation.Valid;
 
 /**
  * 处理用户类接口
- * 
+ *
  * @author jiekechoo
  *
  */
 @RestController
 @PropertySource("classpath:message.properties")
-@Api(basePath = "/api", value = "用户API", description = "用户相关", produces = "application/json")
-@RequestMapping("/api")
+@Api(basePath = "/user", value = "用户API", description = "用户相关", produces = "application/json")
+@RequestMapping("/user")
 public class UserController {
 
 	private static final Logger LOGGER = LoggerFactory
@@ -105,7 +96,7 @@ public class UserController {
 
 	/**
 	 * 使用 ResponseBody作为结果 200
-	 * 
+	 *
 	 * @param id
 	 * @return
 	 */
@@ -121,7 +112,7 @@ public class UserController {
 
 	/**
 	 * 使用ResponseEntity作为返回结果 404
-	 * 
+	 *
 	 * @param id
 	 * @return
 	 */
@@ -135,7 +126,7 @@ public class UserController {
 
 	/**
 	 * 使用 ResponseEntity 返回自定义错误结果
-	 * 
+	 *
 	 * @return
 	 */
 	@ApiOperation(httpMethod = "GET", value = "查看用户信息(<font color='blue'>release</font>)", notes = "使用用户id进行查看，自定义返回消息类：code，msg，content")
