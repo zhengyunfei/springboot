@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by wangwei on 2016/9/2.
  */
 @RestController
-@Api(value = "2:用户注册API接口", description = "用户注册",position = 2,produces = "application/json")
+@Api(value = "3:用户注册API接口", description = "用户注册",position = 2,produces = "application/json")
 public class RegisterController {
     @Autowired
     UserMapper userMapper;
@@ -33,8 +33,8 @@ public class RegisterController {
             "{\"message\":\"密码格式错误,正确格式6-16位字母或数字\",\"data\":null,\"code\":1007}<br>" +
             "3:当验证码输入错误的时候返回:<br>" +
             "{\"message\":\"验证码错误\",\"data\":{\"count\":1},\"code\":1008}count:表示错误次数 <br>" +
-            "4:当信息填写正确的时候返回:<br>" +
-            "{\"message\":\"ok\",\"data\":null,\"code\":0}" )
+            "4:当信息填写正确的时候返回token:<br>" +
+            "{\"message\":\"ok\",\"data\":{\"token\":1234678905618},\"code\":0}" )
     @RequestMapping(value = "/api/user/register", method = RequestMethod.POST)
     @ResponseBody
     public Object getCode(@RequestParam String mobile, @RequestParam String vcode,@RequestParam String password,HttpServletRequest request, String codeImage){

@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by wangwei on 2016/9/2.
  */
 @RestController
-@Api(value = "3:验证码API接口", description = "短信验证码和图形验证码",position = 1,produces = "application/json")
+@Api(value = "4:验证码API接口", description = "短信验证码和图形验证码",position = 1,produces = "application/json")
 public class CodeController {
     @Autowired
     UserMapper userMapper;
