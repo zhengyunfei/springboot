@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by wangwei on 2016/9/2.
  */
 @RestController
-@Api(value = "3:用户注册API接口", description = "用户注册",position = 2,produces = "application/json")
+@Api(value = "2:用户注册API接口", description = "用户注册",position = 2,produces = "application/json")
 public class RegisterController {
     @Autowired
     UserMapper userMapper;
