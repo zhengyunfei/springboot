@@ -23,9 +23,10 @@ public class UserAuthenticationAPI {
 
     @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>用户认证第一步</font>)",position = 1,nickname = "用户认证第一步", notes = "<font color='green'>传递参数</font>" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
-            "<tr><td>name</td><td>否</td><td>用户名</td></tr>" +
-            "<tr><td>email</td><td>否</td><td>邮箱</td></tr>" +
-            "<tr><td>idCardNo</td><td>否</td><td>身份证号码</td></tr>" +
+            "<tr><td>userName</td><td>否</td><td>用户名</td></tr>" +
+            "<tr><td>sex</td><td>否</td><td>性别</td></tr>" +
+            "<tr><td>maile</td><td>否</td><td>邮箱</td></tr>" +
+            "<tr><td>idCard</td><td>否</td><td>身份证号码</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" )
     /*
 	 * 用户认证API接口 第一步
@@ -88,10 +89,9 @@ public class UserAuthenticationAPI {
      */
     @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>批量更新用户信息接口</font>)",position = 4,nickname = "批量更新用户信息接口", notes = "<font color='green'>传递参数</font>:<br>" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
-            "<tr><td>company</td><td>否</td><td>公司名称</td></tr>" +
-            "<tr><td>position</td><td>否</td><td>职位</td></tr>" +
-            "<tr><td>assest</td><td>否</td><td>金融资产量</td></tr>" +
-            "<tr><td>arpm</td><td>否</td><td>近三年平均收入</td></tr>" +
+            "<tr><td>name</td><td>否</td><td>用户名</td></tr>" +
+            "<tr><td>email</td><td>否</td><td>邮箱</td></tr>" +
+            "<tr><td>idCardNo</td><td>否</td><td>身份证号码</td></tr>" +
             "<tr><td>company</td><td>否</td><td>公司名称</td></tr>" +
             "<tr><td>position</td><td>否</td><td>职位</td></tr>" +
             "<tr><td>assest</td><td>否</td><td>金融资产量</td></tr>" +
