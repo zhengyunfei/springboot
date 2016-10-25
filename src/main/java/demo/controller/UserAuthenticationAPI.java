@@ -27,13 +27,19 @@ public class UserAuthenticationAPI {
             "<tr><td>sex</td><td>否</td><td>性别</td></tr>" +
             "<tr><td>maile</td><td>否</td><td>邮箱</td></tr>" +
             "<tr><td>idCard</td><td>否</td><td>身份证号码</td></tr>" +
-            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" )
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+            "<div><h2>返回结果情况如下：</h2></div>" +
+            "1：{\"code\":1013,\"message\":\"用户名错误请输入3-20位字母或数字\",\"data\":null}<br>" +
+            "2：{\"code\":1015,\"message\":\"身份证格式错误\",\"data\":null}<br>" +
+            "3：{\"code\":1014,\"message\":\"邮箱格式错误\",\"data\":null}<br>" +
+            "4：{\"code\":1005,\"message\":\"token无效\",\"data\":null}<br>" +
+            "5：{\"code\":0,\"message\":\"成功\",\"data\":null}<br>" )
     /*
 	 * 用户认证API接口 第一步
 	 */
     @RequestMapping(value = "/api/urz/step1", method = RequestMethod.POST)
     @ResponseBody
-    public Object step1(@RequestParam String name, @RequestParam String sex, @RequestParam String email,@RequestParam String idCardNo,@RequestParam String token, HttpServletRequest request) {
+    public Object step1(@RequestParam String userName, @RequestParam String sex, @RequestParam String maile,@RequestParam String idCard,@RequestParam String token, HttpServletRequest request) {
         String myJsonData="";
         return myJsonData;
     }
@@ -44,7 +50,13 @@ public class UserAuthenticationAPI {
             "<tr><td>position</td><td>否</td><td>职位</td></tr>" +
             "<tr><td>assest</td><td>否</td><td>金融资产量</td></tr>" +
             "<tr><td>arpm</td><td>否</td><td>近三年平均收入</td></tr>" +
-            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" )
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+            "<div><h2>返回结果：</h2></div>"+
+            "1:{\"code\":1019,\"message\":\"近三年平均收入错误，只能为数字\",\"data\":null}<br>"+
+            "2:{\"code\":1018,\"message\":\"金融资产量错误，只能为数字\",\"data\":null}<br>"+
+            "3:{\"code\":1005,\"message\":\"token无效\",\"data\":null}<br>"+
+            "4:{\"code\":0,\"message\":\"成功\",\"data\":null}"
+    )
     /*
 	 * 用户认证API接口 第二步
 	 */
@@ -73,10 +85,7 @@ public class UserAuthenticationAPI {
 
     /**
      * 批量更新用户信息接口
-     * @param name
      * @param sex
-     * @param email
-     * @param idCardNo
      * @param company
      * @param position
      * @param assest
@@ -89,9 +98,10 @@ public class UserAuthenticationAPI {
      */
     @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>批量更新用户信息接口</font>)",position = 4,nickname = "批量更新用户信息接口", notes = "<font color='green'>传递参数</font>:<br>" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
-            "<tr><td>name</td><td>否</td><td>用户名</td></tr>" +
-            "<tr><td>email</td><td>否</td><td>邮箱</td></tr>" +
-            "<tr><td>idCardNo</td><td>否</td><td>身份证号码</td></tr>" +
+            "<tr><td>userName</td><td>否</td><td>用户名</td></tr>" +
+            "<tr><td>sex</td><td>否</td><td>性别</td></tr>" +
+            "<tr><td>maile</td><td>否</td><td>邮箱</td></tr>" +
+            "<tr><td>idCard</td><td>否</td><td>身份证号码</td></tr>" +
             "<tr><td>company</td><td>否</td><td>公司名称</td></tr>" +
             "<tr><td>position</td><td>否</td><td>职位</td></tr>" +
             "<tr><td>assest</td><td>否</td><td>金融资产量</td></tr>" +
@@ -104,7 +114,7 @@ public class UserAuthenticationAPI {
 	 */
     @RequestMapping(value = "/api/urz/step4", method = RequestMethod.POST)
     @ResponseBody
-    public Object step4(@RequestParam String name, @RequestParam String sex, @RequestParam String email,@RequestParam String idCardNo,@RequestParam String company, @RequestParam String position, @RequestParam String assest,@RequestParam String arpm,@RequestParam String USERCARD_IMAGE, @RequestParam String IDCARD_IMAGE,@RequestParam String token, HttpServletRequest request) {
+    public Object step4(@RequestParam String userName, @RequestParam String sex, @RequestParam String maile,@RequestParam String idCard,@RequestParam String company, @RequestParam String position, @RequestParam String assest,@RequestParam String arpm,@RequestParam String USERCARD_IMAGE, @RequestParam String IDCARD_IMAGE,@RequestParam String token, HttpServletRequest request) {
         String myJsonData="";
         return myJsonData;
     }
