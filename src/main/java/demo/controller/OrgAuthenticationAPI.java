@@ -21,7 +21,7 @@ public class OrgAuthenticationAPI {
     @Autowired
     UserMapper userMapper;
 
-    @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>机构用户认证第一步</font>)",position = 1,nickname = "机构用户认证第一步", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>机构用户认证第一步</font>)",position = 1,nickname = "机构用户认证第一步", notes = "<h4>传递参数</h4>:<br>" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>orgName</td><td>否</td><td>机构名称</td></tr>" +
             "<tr><td>orgDutypersonName</td><td>否</td><td>机构负责人名称</td></tr>" +
@@ -45,7 +45,7 @@ public class OrgAuthenticationAPI {
         return myJsonData;
     }
 
-    @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>机构用户认证第二步</font>)",position = 2,nickname = "机构用户认证第二步", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>机构用户认证第二步</font>)",position = 2,nickname = "机构用户认证第二步", notes = "<h4>传递参数</h4>:<br>" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>orgAssets</td><td>否</td><td>机构净资产</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
@@ -65,7 +65,7 @@ public class OrgAuthenticationAPI {
     }
 
 
-    @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>机构用户认证第三步</font>)",position = 3,nickname = "机构用户认证第三步", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>机构用户认证第三步</font>)",position = 3,nickname = "机构用户认证第三步", notes = "<h4>传递参数</h4>:<br>" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>ORG_PERSON_CARD_URL</td><td>否</td><td>机构负责人照片：需要将form-data; name=ORG_PERSON_CARD_URL</td></tr>" +
             "<tr><td>ORG_LICENSE_URL</td><td>否</td><td>机构营业执照：需要将form-data; name=ORG_LICENSE_URL</td></tr>" +
@@ -85,7 +85,7 @@ public class OrgAuthenticationAPI {
     }
 
 
-    @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>批量更新机构用户信息</font>)",position = 3,nickname = "批量更新机构用户信息", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>批量更新机构用户信息</font>)",position = 3,nickname = "批量更新机构用户信息", notes = "<h4>传递参数</h4>:<br>" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>orgName</td><td>否</td><td>机构名称</td></tr>" +
             "<tr><td>orgDutypersonName</td><td>否</td><td>机构负责人名称</td></tr>" +

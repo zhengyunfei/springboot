@@ -19,7 +19,27 @@ public class TokenUserInfoController {
     @Autowired
     UserMapper userMapper;
 
-    @ApiOperation(httpMethod = "POST", value = "根据token获取个人基本信息第一步(<font color='blue'>release</font>)",position = 1,nickname = "个人基本信息第一步", notes = "<h2>传递参数</h2>:<br>" +
+
+    @ApiOperation(httpMethod = "POST", value = "根据token获取用户注册步骤以及认证审核状态(<font color='blue'>release</font>)",position = 1,nickname = "获取用户认证审核状态", notes = "<h4>传递参数</h4>" +
+            "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+            "<h4>返回字段</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"message\":\"token无效\",\n\"data\":\"[]\",\n\"code\":1005\n}</code></pre></div>"+
+            "<h4>成功时返回:</h4>"+
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>" +
+            "{\r\"code\":0,\n\"message\":\"成功\",\n\"data\":{\n\"userName\":\"令狐冲\",\n\"mobile\":\"13717625140\",\n\"userStatus\":0,\n\"userRegisterStep\":4}}"+
+            "</code></pre></div>"+
+            "<h4>用户状态解析:</h4>"+
+            "<div class=\"block response_body json\"><pre class=\"html\"><code>userStatus:0信息未完善1审核中2审核通过3审核不通过4冻结</code></pre></div>"
+    )
+    @RequestMapping(value = "/api/user/getStepAndStatus", method = RequestMethod.POST)
+    @ResponseBody
+    public Object getUserStepAndStatus(@RequestParam String token){
+        String myJsonData="";
+        return myJsonData;
+    }
+
+    @ApiOperation(httpMethod = "POST", value = "根据token获取个人基本信息第一步(<font color='blue'>release</font>)",position = 1,nickname = "个人基本信息第一步", notes = "<h4>传递参数</h4>:<br>" +
             "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<h4>返回字段</h4>" +
@@ -33,7 +53,7 @@ public class TokenUserInfoController {
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "POST", value = "根据token获取个人基本信息第二步(<font color='blue'>release</font>)",position = 2,nickname = "个人基本信息第二步", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "根据token获取个人基本信息第二步(<font color='blue'>release</font>)",position = 2,nickname = "个人基本信息第二步", notes = "<h4>传递参数</h4>:<br>" +
             "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<h4>token无效时返回字段</h4>" +
@@ -47,7 +67,7 @@ public class TokenUserInfoController {
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "POST", value = "根据token获取个人基本信息第三步(<font color='blue'>release</font>)",position = 3,nickname = "个人基本信息第三步", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "根据token获取个人基本信息第三步(<font color='blue'>release</font>)",position = 3,nickname = "个人基本信息第三步", notes = "<h4>传递参数</h4>:<br>" +
             "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<h4>token无效时返回字段</h4>" +
@@ -61,7 +81,7 @@ public class TokenUserInfoController {
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "POST", value = "根据token获取个人完整基本信息(<font color='blue'>release</font>)",position = 4,nickname = "个人完整基本信息", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "根据token获取个人完整基本信息(<font color='blue'>release</font>)",position = 4,nickname = "个人完整基本信息", notes = "<h4>传递参数</h4>:<br>" +
             "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<h4>token无效时返回字段</h4>" +
@@ -80,7 +100,7 @@ public class TokenUserInfoController {
 
     /**************************************************************机构基本信息************************************************************/
 
-    @ApiOperation(httpMethod = "POST", value = "根据token获取机构基本信息第一步(<font color='blue'>release</font>)",position = 5,nickname = "机构基本信息第一步", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "根据token获取机构基本信息第一步(<font color='blue'>release</font>)",position = 5,nickname = "机构基本信息第一步", notes = "<h4>传递参数</h4>:<br>" +
             "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<h4>token无效时返回字段</h4>" +
@@ -95,7 +115,7 @@ public class TokenUserInfoController {
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "POST", value = "根据token获取机构基本信息第二步(<font color='blue'>release</font>)",position = 6,nickname = "机构基本信息第二步", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "根据token获取机构基本信息第二步(<font color='blue'>release</font>)",position = 6,nickname = "机构基本信息第二步", notes = "<h4>传递参数</h4>:<br>" +
             "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<h4>token无效时返回字段</h4>" +
@@ -111,7 +131,7 @@ public class TokenUserInfoController {
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "POST", value = "根据token获取机构基本信息第三步(<font color='blue'>release</font>)",position = 7,nickname = "机构基本信息第三步", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "根据token获取机构基本信息第三步(<font color='blue'>release</font>)",position = 7,nickname = "机构基本信息第三步", notes = "<h4>传递参数</h4>:<br>" +
             "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<h4>token无效时返回字段</h4>" +
@@ -127,7 +147,7 @@ public class TokenUserInfoController {
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "POST", value = "根据token获取机构完整基本信息(<font color='blue'>release</font>)",position = 8,nickname = "机构完整基本信息", notes = "<h2>传递参数</h2>:<br>" +
+    @ApiOperation(httpMethod = "POST", value = "根据token获取机构完整基本信息(<font color='blue'>release</font>)",position = 8,nickname = "机构完整基本信息", notes = "<h4>传递参数</h4>:<br>" +
             "<table><tr><th>字段</th><th>是否为空</th><th>备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<h4>token无效时返回字段</h4>" +

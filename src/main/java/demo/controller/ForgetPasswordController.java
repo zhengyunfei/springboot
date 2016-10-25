@@ -21,13 +21,13 @@ public class ForgetPasswordController {
     @Autowired
     UserMapper userMapper;
     @ApiOperation(httpMethod = "POST", value = "找回密码API(<font color='blue'>release</font>)",position = 1,nickname = "找回密码API", notes = "当点击下一步的时候，需要传递mobiel和vcode<br>" +
-            "当点击确认修改的时候，需要再传递password<br><h2>传递参数:</h2><br>" +
+            "当点击确认修改的时候，需要再传递password<br><h4>传递参数:</h4><br>" +
             "<table border='1' cellspacing='10' cellpadding='10'><tr><th>字段</th><th>备注</th><th>是否为空</th></tr>" +
             "<tr><td>mobile</td><td>手机号码</td> <td>否</td></tr>" +
             "<tr><td>vcode</td><td>手机号码</td> <td>否</td></tr>" +
             "<tr><td>password</td><td>密码</td> <td>当手机号码存在，并且验证码正确的情况下，需要输入passwrd进行更新操作</td></tr>" +
             "</table>" +
-            "<h2>返回字段:</h2><br>" +
+            "<h4>返回字段:</h4><br>" +
             "<div>1：当手机号码格式错误的时候:</div>" +
             "<div>{\"message\":\"手机号码格式错误\",\"data\":null,\"code\":1004}</div>" +
             "<div>手机号码未注册时返回</div>" +

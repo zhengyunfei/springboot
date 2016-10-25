@@ -51,7 +51,7 @@ public class UserAuthenticationAPI {
             "<tr><td>assest</td><td>否</td><td>金融资产量</td></tr>" +
             "<tr><td>arpm</td><td>否</td><td>近三年平均收入</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
-            "<div><h2>返回结果：</h2></div>"+
+            "<div><h4>返回结果：</h4></div>"+
             "1:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1019,\n\"message\":\"近三年平均收入错误，只能为数字\",\n\"data\":null\n}</code></pre></div>"+
             "2:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1018,\n\"message\":\"金融资产量错误，只能为数字\",\n\"data\":null\n}</code></pre></div>"+
             "3:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1005,\n\"message\":\"token无效\",\n\"data\":null\n}</code></pre></div>"+
