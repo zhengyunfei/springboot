@@ -27,7 +27,14 @@ public class OrgAuthenticationAPI {
             "<tr><td>orgDutypersonName</td><td>否</td><td>机构负责人名称</td></tr>" +
             "<tr><td>orgDutypersonPosition</td><td>否</td><td>机构负责人职位</td></tr>" +
             "<tr><td>orgDutypepsonEmaile</td><td>否</td><td>机构负责人邮箱</td></tr>" +
-            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" )
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+            "<div>返回结果分析：</div>"+
+            "1:{\"code\":1029,\"message\":\"机构名称填写错误,请填写1-50数字、字母、中文\",\"data\":null}"+
+            "2:{\"code\":1030,\"message\":\"机构负责人名称填写错误,请填写1-50数字、字母、中文\",\"data\":null}"+
+            "3:{\"code\":1032,\"message\":\"机构负责人邮箱填写错误\",\"data\":null}"+
+            "4:{\"code\":1005,\"message\":\"token无效\",\"data\":null}"+
+            "5:{\"code\":0,\"message\":\"成功\",\"data\":null}"
+    )
     /*
 	 * 机构用户认证API接口 第一步
 	 */
@@ -41,7 +48,12 @@ public class OrgAuthenticationAPI {
     @ApiOperation(httpMethod = "POST", value = "(<font color='blue'>机构用户认证第二步</font>)",position = 2,nickname = "机构用户认证第二步", notes = "<h2>传递参数</h2>:<br>" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>orgAssets</td><td>否</td><td>机构净资产</td></tr>" +
-            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" )
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+            "<div>返回结果：</div>" +
+            "<div>1：{\"code\":1024,\"message\":\"机构净资产错误，只能为数字\",\"data\":null}</div>" +
+            "<div>2：{\"code\":1005,\"message\":\"token无效\",\"data\":null}</div>" +
+            "<div>3：{\"code\":0,\"message\":\"成功\",\"data\":null}</div>"
+    )
     /*
 	 * 机构用户认证API接口 第二步
 	 */
@@ -57,7 +69,11 @@ public class OrgAuthenticationAPI {
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>ORG_PERSON_CARD_URL</td><td>否</td><td>机构负责人照片：需要将form-data; name=ORG_PERSON_CARD_URL</td></tr>" +
             "<tr><td>ORG_LICENSE_URL</td><td>否</td><td>机构营业执照：需要将form-data; name=ORG_LICENSE_URL</td></tr>" +
-            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" )
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+            "<div><h1><font color='red'>返回结果：</font></h1></div>" +
+            "<div>1:{\"code\":1028,\"message\":\"图片没有上传\",\"data\":null}</div>" +
+            "<div>2:{\"code\":0,\"message\":\"成功\",\"data\":null}</div>"
+    )
     /*
 	 * 机构用户认证API接口 第三步
 	 */
