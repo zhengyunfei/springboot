@@ -28,12 +28,12 @@ public class UserAuthenticationAPI {
             "<tr><td>maile</td><td>否</td><td>邮箱</td></tr>" +
             "<tr><td>idCard</td><td>否</td><td>身份证号码</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
-            "<div><h2>返回结果情况如下：</h2></div>" +
-            "1：{\"code\":1013,\"message\":\"用户名错误请输入3-20位字母或数字\",\"data\":null}<br>" +
-            "2：{\"code\":1015,\"message\":\"身份证格式错误\",\"data\":null}<br>" +
-            "3：{\"code\":1014,\"message\":\"邮箱格式错误\",\"data\":null}<br>" +
-            "4：{\"code\":1005,\"message\":\"token无效\",\"data\":null}<br>" +
-            "5：{\"code\":0,\"message\":\"成功\",\"data\":null}<br>" )
+            "<h4>返回结果情况如下：</h4>" +
+            "1：<div class=\"block response_body json\"><pre class=\"json\"><code>{\r\"code\":1013,\n\"message\":\"用户名错误请输入3-20位字母或数字\",\n\"data\":null\n}</code></pre></div>" +
+            "2：<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1015,\n\"message\":\"身份证格式错误\",\n\"data\":null\n}</code></pre></div>" +
+            "3：<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1014,\n\"message\":\"邮箱格式错误\",\n\"data\":null\n}</code></pre></div>" +
+            "4：<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1005,\n\"message\":\"token无效\",\n\"data\":null\n}</code></pre></div>" +
+            "5：<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":0,\n\"message\":\"成功\",\n\"data\":null\n}</code></pre></div>" )
     /*
 	 * 用户认证API接口 第一步
 	 */
@@ -52,10 +52,10 @@ public class UserAuthenticationAPI {
             "<tr><td>arpm</td><td>否</td><td>近三年平均收入</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
             "<div><h2>返回结果：</h2></div>"+
-            "1:{\"code\":1019,\"message\":\"近三年平均收入错误，只能为数字\",\"data\":null}<br>"+
-            "2:{\"code\":1018,\"message\":\"金融资产量错误，只能为数字\",\"data\":null}<br>"+
-            "3:{\"code\":1005,\"message\":\"token无效\",\"data\":null}<br>"+
-            "4:{\"code\":0,\"message\":\"成功\",\"data\":null}"
+            "1:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1019,\n\"message\":\"近三年平均收入错误，只能为数字\",\n\"data\":null\n}</code></pre></div>"+
+            "2:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1018,\n\"message\":\"金融资产量错误，只能为数字\",\n\"data\":null\n}</code></pre></div>"+
+            "3:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1005,\n\"message\":\"token无效\",\n\"data\":null\n}</code></pre></div>"+
+            "4:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":0,\n\"message\":\"成功\",\n\"data\":null\n}</code></pre></div>"
     )
     /*
 	 * 用户认证API接口 第二步
