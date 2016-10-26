@@ -49,8 +49,18 @@ public class OrgAuthenticationAPI {
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>orgAssets</td><td>否</td><td>机构净资产</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+
+            "<h4>orgAessets字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"orgAssets\":{\n" +
+            "\"1\":\"一亿以下\",\n" +
+            "\"2\":\"1-100亿元\",\n" +
+            "\"3\":\"10-100亿元\",\n" +
+            "\"4\":\"500亿以上\",\n" +
+            "}}"+
+            "</code></pre></div>"+
             "<h4>返回结果：</h4>" +
-            "1：<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1024,\n\"message\":\"机构净资产错误，只能为数字\",\n\"data\":null\n}</code></pre></div>" +
             "2：<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1005,\n\"message\":\"token无效\",\n\"data\":null\n}</code></pre></div>" +
             "3：<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":0,\n\"message\":\"成功\",\n\"data\":null\n}</code></pre></div>"
     )
@@ -94,7 +104,18 @@ public class OrgAuthenticationAPI {
             "<tr><td>orgAssets</td><td>否</td><td>机构净资产</td></tr>" +
             "<tr><td>ORG_PERSON_CARD_URL</td><td>否</td><td>机构负责人照片：需要将form-data; name=ORG_PERSON_CARD_URL</td></tr>" +
             "<tr><td>ORG_LICENSE_URL</td><td>否</td><td>机构营业执照：需要将form-data; name=ORG_LICENSE_URL</td></tr>" +
-            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" )
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>"+
+            "<h4>orgAessets字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"orgAssets\":{\n" +
+            "\"1\":\"一亿以下\",\n" +
+            "\"2\":\"1-100亿元\",\n" +
+            "\"3\":\"10-100亿元\",\n" +
+            "\"4\":\"500亿以上\",\n" +
+            "}}"+
+            "</code></pre></div>"
+    )
     /*
 	 * 批量更新机构用户信息
 	 */

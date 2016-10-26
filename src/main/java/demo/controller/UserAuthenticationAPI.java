@@ -51,11 +51,29 @@ public class UserAuthenticationAPI {
             "<tr><td>assest</td><td>否</td><td>金融资产量</td></tr>" +
             "<tr><td>arpm</td><td>否</td><td>近三年平均收入</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+            "<h4>assest字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"assest\":{\n" +
+            "\"1\":\"200万以下\",\n" +
+            "\"2\":\"200-500万元\",\n" +
+            "\"3\":\"500-1000万元\",\n" +
+            "\"4\":\"1000万以上\",\n" +
+            "}}"+
+            "</code></pre></div>"+
+            "<h4>arpm字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"arpm\":{\n" +
+            "\"1\":\"20万以下\",\n" +
+            "\"2\":\"20-50万元\",\n" +
+            "\"3\":\"50-100万元\",\n" +
+            "\"4\":\"200万以上\",\n" +
+            "}}"+
+            "</code></pre></div>"+
             "<div><h4>返回结果：</h4></div>"+
-            "1:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1019,\n\"message\":\"近三年平均收入错误，只能为数字\",\n\"data\":null\n}</code></pre></div>"+
-            "2:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1018,\n\"message\":\"金融资产量错误，只能为数字\",\n\"data\":null\n}</code></pre></div>"+
-            "3:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1005,\n\"message\":\"token无效\",\n\"data\":null\n}</code></pre></div>"+
-            "4:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":0,\n\"message\":\"成功\",\n\"data\":null\n}</code></pre></div>"
+            "1:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":1005,\n\"message\":\"token无效\",\n\"data\":null\n}</code></pre></div>"+
+            "2:<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":0,\n\"message\":\"成功\",\n\"data\":null\n}</code></pre></div>"
     )
     /*
 	 * 用户认证API接口 第二步
@@ -108,7 +126,28 @@ public class UserAuthenticationAPI {
             "<tr><td>arpm</td><td>否</td><td>近三年平均收入</td></tr>" +
             "<tr><td>USERCARD_IMAGE</td><td>否</td><td>名片：需要将form-data; name=USERCARD_IMAGE</td></tr>" +
             "<tr><td>IDCARD_IMAGE</td><td>否</td><td>身份证照片：需要将form-data; name=IDCARD_IMAGE</td></tr>" +
-            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" )
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>"+
+            "<h4>assest字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"assest\":{\n" +
+            "\"1\":\"200万以下\",\n" +
+            "\"2\":\"200-500万元\",\n" +
+            "\"3\":\"500-1000万元\",\n" +
+            "\"4\":\"1000万以上\",\n" +
+            "}}"+
+            "</code></pre></div>"+
+            "<h4>arpm字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"arpm\":{\n" +
+            "\"1\":\"20万以下\",\n" +
+            "\"2\":\"20-50万元\",\n" +
+            "\"3\":\"50-100万元\",\n" +
+            "\"4\":\"200万以上\",\n" +
+            "}}"+
+            "</code></pre></div>"
+    )
     /*
 	 * 用户认证API接口 第三步
 	 */
