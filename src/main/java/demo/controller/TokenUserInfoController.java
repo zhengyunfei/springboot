@@ -59,7 +59,27 @@ public class TokenUserInfoController {
             "<h4>token无效时返回字段</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"message\":\"token无效\",\n\"data\":\"[]\",\n\"code\":1005\n}</code></pre></div>"+
             "<h4>成功时返回:</h4>"+
-            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":0,\n\"message\":\"成功\",\n\"data\":{\n\"company\":\"清科就团22222\",\n\"position\":\"清科集团测试\",\n\"assest\":\"500\",\n\"arpm\":\"100\"\n}\n}</code></pre></div>"
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"code\":0,\n\"message\":\"成功\",\n\"data\":{\n\"company\":\"清科就团22222\",\n\"position\":\"清科集团测试\",\n\"assest\":\"2\",\n\"arpm\":\"1\"\n}\n}</code></pre></div>"+
+            "<h4>assest字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"assest\":{\n" +
+            "\"1\":\"200万以下\",\n" +
+            "\"2\":\"200-500万元\",\n" +
+            "\"3\":\"500-1000万元\",\n" +
+            "\"4\":\"1000万以上\",\n" +
+            "}}"+
+            "</code></pre></div>"+
+            "<h4>arpm字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"arpm\":{\n" +
+            "\"1\":\"20万以下\",\n" +
+            "\"2\":\"20-50万元\",\n" +
+            "\"3\":\"50-100万元\",\n" +
+            "\"4\":\"200万以上\",\n" +
+            "}}"+
+            "</code></pre></div>"
     )
     @RequestMapping(value = "/api/user/getTokenUserInfoStep2", method = RequestMethod.POST)
     @ResponseBody
@@ -89,7 +109,27 @@ public class TokenUserInfoController {
             "<h4>成功时返回:</h4>"+
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{" +
             "\n\"code\":0,\r" +
-            "\"message\":\"成功\",\n\"data\":{\n\"sex\":\"1\",\n\"maile\":\"455@qq.com\",\n\"position\":\"清科集团测试\",\n\"company\":\"清科就团22222\",\n\"userCardUrl\":\"/image/20161025/201610236156326.jpg\",\n\"idCardUrl\":\"/image/20161025/201610236156326.jpg\",\n\"idCard\":\"411422198809021214\",\n\"assest\":\"500\",\n\"arpm\":\"100\"\n}\n}</code><pre></div>"
+            "\"message\":\"成功\",\n\"data\":{\n\"sex\":\"1\",\n\"maile\":\"455@qq.com\",\n\"position\":\"清科集团测试\",\n\"company\":\"清科就团22222\",\n\"userCardUrl\":\"/image/20161025/201610236156326.jpg\",\n\"idCardUrl\":\"/image/20161025/201610236156326.jpg\",\n\"idCard\":\"411422198809021214\",\n\"assest\":\"1\",\n\"arpm\":\"2\"\n}\n}</code><pre></div>"+
+            "<h4>assest字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"assest\":{\n" +
+            "\"1\":\"200万以下\",\n" +
+            "\"2\":\"200-500万元\",\n" +
+            "\"3\":\"500-1000万元\",\n" +
+            "\"4\":\"1000万以上\",\n" +
+            "}}"+
+            "</code></pre></div>"+
+            "<h4>arpm字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"arpm\":{\n" +
+            "\"1\":\"20万以下\",\n" +
+            "\"2\":\"20-50万元\",\n" +
+            "\"3\":\"50-100万元\",\n" +
+            "\"4\":\"200万以上\",\n" +
+            "}}"+
+            "</code></pre></div>"
     )
     @RequestMapping(value = "/api/user/getTokenUserInfo", method = RequestMethod.POST)
     @ResponseBody
@@ -122,7 +162,17 @@ public class TokenUserInfoController {
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"message\":\"token无效\",\n\"data\":\"[]\",\n\"code\":1005\n}</code></pre></div>"+
             "<h4>成功时返回</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>" +
-            "{\r\"code\":0,\n\"message\":\"成功\",\n\"data\":{\n\"orgAssets\":\"500\"\n}\n}"+
+            "\r{\"code\":0,\r\"message\":\"成功\",\r\"data\":{\r\"orgAssets\":\"1\"\r}\r}"+
+            "</code></pre></div>"+
+            "<h4>orgAessets字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"orgAssets\":{\n" +
+            "\"1\":\"一亿以下\",\n" +
+            "\"2\":\"1-100亿元\",\n" +
+            "\"3\":\"10-100亿元\",\n" +
+            "\"4\":\"500亿以上\",\n" +
+            "}}"+
             "</code></pre></div>"
     )
     @RequestMapping(value = "/api/user/getTokenOrgUserInfoStep2", method = RequestMethod.POST)
@@ -154,7 +204,17 @@ public class TokenUserInfoController {
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"message\":\"token无效\",\n\"data\":\"[]\",\n\"code\":1005\n}</code></pre></div>"+
             "<h4>成功时返回</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>" +
-            "\r{\"code\":0,\n\"message\":\"成功\",\n\"data\":{\n\"orgName\":\"A机构\",\n\"orgAssets\":\"500\",\n\"orgDutypersonName\":\"A机构负责人\",\n\"orgDutypersonSex\":\"男\",\n\"orgDutypepsonMobile\":null,\n\"orgDutypepsonEmaile\":\"100@qq.com\",\n\"orgDutypersonPosition\":\"500\",\n\"orgDutypersonCardurl\":\"/image/20161025/20161025633216.jpg\",\n\"orgLicenseUrl\":\"/image/20161025/20161025633216.jpg\"\n}\n}"+
+            "\r{\"code\":0,\n\"message\":\"成功\",\n\"data\":{\n\"orgName\":\"A机构\",\n\"orgAssets\":\"1\",\n\"orgDutypersonName\":\"A机构负责人\",\n\"orgDutypersonSex\":\"男\",\n\"orgDutypepsonMobile\":null,\n\"orgDutypepsonEmaile\":\"100@qq.com\",\n\"orgDutypersonPosition\":\"500\",\n\"orgDutypersonCardurl\":\"/image/20161025/20161025633216.jpg\",\n\"orgLicenseUrl\":\"/image/20161025/20161025633216.jpg\"\n}\n}"+
+            "</code></pre></div>"+
+            "<h4>orgAessets字段解析</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\n" +
+            "{\"orgAssets\":{\n" +
+            "\"1\":\"一亿以下\",\n" +
+            "\"2\":\"1-100亿元\",\n" +
+            "\"3\":\"10-100亿元\",\n" +
+            "\"4\":\"500亿以上\",\n" +
+            "}}"+
             "</code></pre></div>"
     )
     @RequestMapping(value = "/api/user/getTokenOrgUserInfo", method = RequestMethod.POST)

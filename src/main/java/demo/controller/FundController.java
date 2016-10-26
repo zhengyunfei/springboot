@@ -21,7 +21,7 @@ public class FundController {
 
 
     @ApiOperation(httpMethod = "GET", value = "1：基金详情(<font color='blue'>release</font>)",position = 3,notes = "接口地址:/api/fund/findById<br>请求参数:<br>" +
-            "<table>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code><table>" +
             "<th >参数</th><th>参数名称</th><th>是否为空</th><th>备注</th>" +
             "<tr><td >id</td><td>基金ID</td><td>否</td><td>基金ID</td></tr></table>" +
             "<br>返回说明:<br>" +
@@ -43,7 +43,7 @@ public class FundController {
             "<tr><td>desc</td><td>简介</td></tr>" +
             "<tr><td>fundByname</td><td>标题</td></tr>" +
             "<tr><td>rate</td><td>募集进度</td></tr>" +
-            "<table>")
+            "<table></code></pre></div>")
     @ResponseBody
     @RequestMapping(value = "/api/fund/findById", method = RequestMethod.GET)
     public String create(@RequestParam String id) {

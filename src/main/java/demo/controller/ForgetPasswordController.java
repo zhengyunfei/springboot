@@ -27,15 +27,15 @@ public class ForgetPasswordController {
             "<tr><td>vcode</td><td>手机号码</td> <td>否</td></tr>" +
             "<tr><td>password</td><td>密码</td> <td>当手机号码存在，并且验证码正确的情况下，需要输入passwrd进行更新操作</td></tr>" +
             "</table>" +
-            "<h4>返回字段:</h4><br>" +
-            "<div>1：当手机号码格式错误的时候:</div>" +
-            "<div>{\"message\":\"手机号码格式错误\",\"data\":null,\"code\":1004}</div>" +
-            "<div>手机号码未注册时返回</div>" +
-            "{\"code\":1025,\"message\":\"该手机号码未注册\",\"data\":null}" +
-            "<div>2:当密码格式输入错误的时候返回:</div>" +
-            "<div>{\"message\":\"密码格式错误,正确格式6-16位字母或数字\",\"data\":null,\"code\":1007}</div>" +
-            "<div>信息校验成功返回</div>" +
-            "{\"code\":1026,\"message\":\"密码更新成功\",\"data\":null}"
+            "<h4>返回字段:</h4>" +
+            "<h4>1：当手机号码格式错误的时候:</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"手机号码格式错误\",\"data\":null,\"code\":1004}</code></pre></div>" +
+            "<h4>手机号码未注册时返回</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"code\":1025,\"message\":\"该手机号码未注册\",\"data\":null}</code></pre></div>" +
+            "<h4>2:当密码格式输入错误的时候返回:</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"密码格式错误,正确格式6-16位字母或数字\",\"data\":null,\"code\":1007}</code></pre></div>" +
+            "<h4>信息校验成功返回</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"code\":1026,\"message\":\"密码更新成功\",\"data\":null}</code></pre></div>"
     )
     @RequestMapping(value = "/api/user/findPassword", method = RequestMethod.POST)
     @ResponseBody
