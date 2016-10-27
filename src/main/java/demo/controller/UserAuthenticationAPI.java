@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by zhengyunfei on 2016/9/2.
  */
 @RestController
-@Api(value = "6:个人用户认证API接口", description = "个人用户认证",position = 2,produces = "application/json")
+@Api(value = "6:个人用户认证API接口", description = "个人用户认证",position = 6,produces = "application/json")
 public class UserAuthenticationAPI {
     @Autowired
     UserMapper userMapper;

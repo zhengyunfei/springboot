@@ -16,7 +16,7 @@ import javax.servlet.http.HttpServletRequest;
  * Created by zhengyunfei on 2016/9/2.
  */
 @RestController
-@Api(value = "十:产品预约API接口文档", description = "未登陆用户预约",position = 10,produces = "application/json")
+@Api(value = "a:产品预约API接口文档", description = "未登陆用户预约",position = 10,produces = "application/json")
 public class RmFundAPI {
     @Autowired
     UserMapper userMapper;

@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 合格投资人认定
  */
 @RestController
-@Api(value = "十一:合格投资人认定API", description = "合格投资人认定，风险揭示书，用户服务协议h5", produces = "application/json")
+@Api(value = "b:合格投资人认定API", description = "合格投资人认定，风险揭示书，用户服务协议h5", produces = "application/json")
 public class InvistorController {
     @Autowired
     UserMapper userMapper;

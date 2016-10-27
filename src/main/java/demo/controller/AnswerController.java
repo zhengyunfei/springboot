@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 风险评估api接口
  */
 @RestController
-@Api(value = "十二:风险评估API接口", description = "风险评估API接口", produces = "application/json")
+@Api(value = "c:风险评估API接口", description = "风险评估API接口", produces = "application/json")
 public class AnswerController {
     @Autowired
     UserMapper userMapper;
