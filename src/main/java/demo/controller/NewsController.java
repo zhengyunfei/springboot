@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
  * 新闻资讯详情api接口
  */
 @RestController
-@Api(value = "十三:新闻资讯详情API接口", description = "新闻资讯详情API接口", produces = "application/json")
+@Api(value = "十四:新闻资讯详情API接口", description = "新闻资讯详情API接口", produces = "application/json")
 public class NewsController {
     @Autowired
     UserMapper userMapper;
