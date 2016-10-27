@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
  * 合格投资人认定
  */
 @RestController
-@Api(value = "十一:合格投资人认定API", description = "合格投资人认定，投资风险，用户协议h5", produces = "application/json")
+@Api(value = "十一:合格投资人认定API", description = "合格投资人认定，风险揭示书，用户服务协议h5", produces = "application/json")
 public class InvistorController {
     @Autowired
     UserMapper userMapper;
@@ -31,16 +31,16 @@ public class InvistorController {
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "GET", value = "用户协议h5",position = 2,nickname = "用户协议h5", notes = "" +
-            "<h4>用户协议h5，直接调url就行</h4>" )
+    @ApiOperation(httpMethod = "GET", value = "用户服务协议h5",position = 2,nickname = "用户服务协议h5", notes = "" +
+            "<h4>用户服务协议h5，直接调url就行</h4>" )
     @RequestMapping(value = "/api/agreement/index", method = RequestMethod.GET)
     @ResponseBody
     public Object agreement(){
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "GET", value = "投资风险h5",position = 2,nickname = "投资风险h5", notes = "<h4>" +
-            "投资风险h5，直接调url就行</h4>" )
+    @ApiOperation(httpMethod = "GET", value = "风险揭示书h5",position = 2,nickname = "风险揭示书h5", notes = "<h4>" +
+            "风险揭示书h5，直接调url就行</h4>" )
     @RequestMapping(value = "/api/risk/index", method = RequestMethod.GET)
     @ResponseBody
     public Object risk(){
