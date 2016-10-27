@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by wangwei on 2016/9/2.
+ * Created by zhengyunfei on 2016/9/2.
  */
 @RestController
 @Api(value = "9:找回密码接口", description = "找回密码API",position = 2,produces = "application/json")

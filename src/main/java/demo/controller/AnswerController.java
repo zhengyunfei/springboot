@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Created by wangwei on 2016/9/2.
+ * Created by zhengyunfei on 2016/9/2.
  * 风险评估api接口
  */
 @RestController

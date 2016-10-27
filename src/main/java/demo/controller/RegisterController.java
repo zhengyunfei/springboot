@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Created by wangwei on 2016/9/2.
+ * Created by zhengyunfei on 2016/9/2.
  */
 @RestController
 @Api(value = "3:用户注册API接口", description = "用户注册",position = 2,produces = "application/json")

@@ -11,7 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 /**
- * Created by wangwei on 2016/9/2.
+ * Created by zhengyunfei on 2016/9/2.
  */
 @RestController
 @Api(value = "1:首页API接口", description = "首页接口", produces = "application/json")
