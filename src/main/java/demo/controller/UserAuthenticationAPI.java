@@ -108,8 +108,6 @@ public class UserAuthenticationAPI {
      * @param position
      * @param assest
      * @param arpm
-     * @param USERCARD_IMAGE
-     * @param IDCARD_IMAGE
      * @param token
      * @param request
      * @return
@@ -124,8 +122,8 @@ public class UserAuthenticationAPI {
             "<tr><td>position</td><td>否</td><td>职位</td></tr>" +
             "<tr><td>assest</td><td>否</td><td>金融资产量</td></tr>" +
             "<tr><td>arpm</td><td>否</td><td>近三年平均收入</td></tr>" +
-            "<tr><td>USERCARD_IMAGE</td><td>否</td><td>名片：需要将form-data; name=USERCARD_IMAGE</td></tr>" +
-            "<tr><td>IDCARD_IMAGE</td><td>否</td><td>身份证照片：需要将form-data; name=IDCARD_IMAGE</td></tr>" +
+            "<tr><td>userCardUrl</td><td>否</td><td>名片:需要先调用接口/api/upload/image获取data:{'key':value}，将取得到的value保存为字段userCardUrl的值传递给接口</td></tr>" +
+            "<tr><td>idCardUrl</td><td>否</td><td>身份证照片：需要先调用接口/api/upload/image获取data:{'key':value}，将取得到的value保存为字段idCardUrl的值传递给接口</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>"+
             "<h4>assest字段解析</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
@@ -153,7 +151,7 @@ public class UserAuthenticationAPI {
 	 */
     @RequestMapping(value = "/api/urz/step4", method = RequestMethod.POST)
     @ResponseBody
-    public Object step4(@RequestParam String userName, @RequestParam String sex, @RequestParam String maile,@RequestParam String idCard,@RequestParam String company, @RequestParam String position, @RequestParam String assest,@RequestParam String arpm,@RequestParam String USERCARD_IMAGE, @RequestParam String IDCARD_IMAGE,@RequestParam String token, HttpServletRequest request) {
+    public Object step4(@RequestParam String userName, @RequestParam String sex, @RequestParam String maile,@RequestParam String idCard,@RequestParam String company, @RequestParam String position, @RequestParam String assest,@RequestParam String arpm,@RequestParam String userCardUrl, @RequestParam String idCardUrl,@RequestParam String token, HttpServletRequest request) {
         String myJsonData="";
         return myJsonData;
     }

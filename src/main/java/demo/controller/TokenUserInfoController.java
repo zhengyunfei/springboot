@@ -109,7 +109,8 @@ public class TokenUserInfoController {
             "<h4>成功时返回:</h4>"+
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{" +
             "\n\"code\":0,\r" +
-            "\"message\":\"成功\",\n\"data\":{\n\"sex\":\"1\",\n\"maile\":\"455@qq.com\",\n\"position\":\"清科集团测试\",\n\"company\":\"清科就团22222\",\n\"userCardUrl\":\"/image/20161025/201610236156326.jpg\",\n\"idCardUrl\":\"/image/20161025/201610236156326.jpg\",\n\"idCard\":\"411422198809021214\",\n\"assest\":\"1\",\n\"arpm\":\"2\"\n}\n}</code><pre></div>"+
+            "\"message\":\"成功\",\n\"data\":{\n\"sex\":\"1\",\n\"maile\":\"455@qq.com\",\n" +
+            "\"userName\":\"令狐冲\",\n\"position\":\"清科集团测试\",\n\"company\":\"清科就团22222\",\n\"userCardUrl\":\"/image/20161025/201610236156326.jpg\",\n\"idCardUrl\":\"/image/20161025/201610236156326.jpg\",\n\"idCard\":\"411422198809021214\",\n\"assest\":\"1\",\n\"arpm\":\"2\"\n}\n}</code><pre></div>"+
             "<h4>assest字段解析</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
             "\n" +

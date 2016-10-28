@@ -102,8 +102,8 @@ public class OrgAuthenticationAPI {
             "<tr><td>orgDutypersonPosition</td><td>否</td><td>机构负责人职位</td></tr>" +
             "<tr><td>orgDutypepsonEmaile</td><td>否</td><td>机构负责人邮箱</td></tr>" +
             "<tr><td>orgAssets</td><td>否</td><td>机构净资产</td></tr>" +
-            "<tr><td>ORG_PERSON_CARD_URL</td><td>否</td><td>机构负责人照片：需要将form-data; name=ORG_PERSON_CARD_URL</td></tr>" +
-            "<tr><td>ORG_LICENSE_URL</td><td>否</td><td>机构营业执照：需要将form-data; name=ORG_LICENSE_URL</td></tr>" +
+            "<tr><td>orgDutypersonCardurl</td><td>否</td><td>机构负责人名片：需要先调用接口/api/upload/image获取data:{'key':value}，将取得到的value保存为字段orgDutypersonCardurl的值传递给接口</td></tr>" +
+            "<tr><td>orgLicenseUrl</td><td>否</td><td>机构营业执照：需要先调用接口/api/upload/image获取data:{'key':value}，将取得到的value保存为字段orgLicenseUrl的值传递给接口</td></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr></table>"+
             "<h4>orgAessets字段解析</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
@@ -121,7 +121,7 @@ public class OrgAuthenticationAPI {
 	 */
     @RequestMapping(value = "/api/orz/step4", method = RequestMethod.POST)
     @ResponseBody
-    public Object step4(@RequestParam String orgName, @RequestParam String orgDutypersonName, @RequestParam String orgDutypersonPosition,@RequestParam String orgDutypepsonEmaile,@RequestParam String orgAssets,@RequestParam String ORG_PERSON_CARD_URL, @RequestParam String ORG_LICENSE_URL,@RequestParam String token, HttpServletRequest request) {
+    public Object step4(@RequestParam String orgName, @RequestParam String orgDutypersonName, @RequestParam String orgDutypersonPosition,@RequestParam String orgDutypepsonEmaile,@RequestParam String orgAssets,@RequestParam String orgDutypersonCardurl, @RequestParam String orgLicenseUrl,@RequestParam String token, HttpServletRequest request) {
         String myJsonData="";
         return myJsonData;
     }
