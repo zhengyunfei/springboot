@@ -824,23 +824,19 @@ this["Handlebars"]["templates"]["operation"] = Handlebars.template({
         var helper, functionType = "function",
         helperMissing = helpers.helperMissing,
         escapeExpression = this.escapeExpression;
-        return "          <h4>响应类 (状态 " + escapeExpression(((helper = (helper = helpers.successCode || (depth0 != null ? depth0.successCode: depth0)) != null ? helper: helperMissing), (typeof helper === functionType ? helper.call(depth0, {
-            "name": "successCode",
-            "hash": {},
-            "data": data
-        }) : helper))) + ")</h4>\n          <p><span class=\"model-signature\" /></p>\n          <br/>\n          <div class=\"response-content-type\" />\n";
+        return "";
     },
     "18": function(depth0, helpers, partials, data) {
         return "          <h4>参数</h4>\n          <table class='fullwidth'>\n          <thead>\n            <tr>\n            <th style=\"width: 100px; max-width: 100px\">参数</th>\n            <th style=\"width: 310px; max-width: 310px\">值</th>\n            <th style=\"width: 200px; max-width: 200px\">描述</th>\n            <th style=\"width: 100px; max-width: 100px\">参数类型</th>\n            <th style=\"width: 220px; max-width: 230px\">数据类型</th>\n            </tr>\n          </thead>\n          <tbody class=\"operation-params\">\n\n          </tbody>\n          </table>\n";
     },
     "20": function(depth0, helpers, partials, data) {
-        return "          <div style='margin:0;padding:0;display:inline'></div>\n          <h4>响应消息</h4>\n          <table class='fullwidth'>\n            <thead>\n            <tr>\n              <th>HTTP状态码</th>\n              <th>原因</th>\n              <th>响应模型</th>\n            </tr>\n            </thead>\n            <tbody class=\"operation-status\">\n            \n            </tbody>\n          </table>\n";
+        return "";
     },
     "22": function(depth0, helpers, partials, data) {
         return "";
     },
     "24": function(depth0, helpers, partials, data) {
-        return "          <div class='sandbox_header'>\n            <input class='submit' name='commit' type='button' value='试一下！' />\n            <a href='#' class='response_hider' style='display:none'>Hide Response</a>\n            <span class='response_throbber' style='display:none'></span>\n          </div>\n";
+        return;
     },
     "compiler": [6, ">= 2.0.0-beta.1"],
     "main": function(depth0, helpers, partials, data) {

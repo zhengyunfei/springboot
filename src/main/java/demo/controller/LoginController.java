@@ -69,5 +69,20 @@ public class LoginController {
             String myJsonData="";
             return myJsonData;
         }
+    @ApiOperation(httpMethod = "POST", value = "退出登陆",position = 2,nickname = "退出登陆清除缓存", notes = "<h4>传递参数:</h4><br>" +
+            "<table border='1' cellspacing='10' cellpadding='10'><tr><th>字段</th><th>备注</th><th>是否为空</th></tr>" +
+            "<tr><td>token</td><td>token</td> <td>否</td></tr>" +
+            "</table>" +
+            "<h4>返回字段:</h4><br>" +
+            "<h4>1：token错误时:</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"token无效\",\"data\":null,\"code\":1004}</code></pre></div>" +
+            "<h4>4:正确时:</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"ok\",\"data\":null</code></pre></div>" )
 
+    @RequestMapping(value = "/api/user/loginout", method = RequestMethod.POST,produces = "application/json")
+    @ResponseBody
+    public Object loginout(HttpServletRequest request,@RequestParam String token) {
+        String myJsonData="";
+        return myJsonData;
+    }
 }
