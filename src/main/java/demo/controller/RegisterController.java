@@ -26,6 +26,7 @@ public class RegisterController {
             "<tr><td>mobile</td><td>手机号码</td> <td>否</td></tr>" +
             "<tr><td>vcode</td><td>验证码</td> <td>否</td></tr>" +
             "<tr><td>password</td><td>密码</td> <td>否</td></tr>" +
+            "<tr><td>source</td><td>来源:ios请传递iOS，android请传递Android</td> <td>否</td></tr>" +
             "<tr><td>codeImage</td><td>图形验证码</td> <td>当验证码输入错误三次以后codeImage必填</td></tr>" +
             "</table>" +
             "<h4>返回字段:</h4>" +
@@ -33,8 +34,10 @@ public class RegisterController {
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"手机号码格式错误\",\"data\":null,\"code\":1004}</code></pre></div>" +
             "<h4>2:当密码格式输入错误的时候返回:</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"密码格式错误,正确格式6-16位字母或数字\",\"data\":null,\"code\":1007}</code></pre></div>" +
-            "<h4>3:当验证码输入错误的时候返回:</div>" +
+            "<h4>3:当验证码输入错误的时候返回:</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"验证码错误\",\"data\":{\"count\":1},\"code\":1008}count:表示错误次数 </code></pre></div>" +
+            "<h4>3:当source未传递时:</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"非法操作\",\"data\":null,\"code\":1043} </code></pre></div>" +
             "<h4>4:当信息填写正确的时候返回token:</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{\"message\":\"ok\",\"data\":{\"token\":1234678905618},\"code\":0}</code></pre></div>" )
     @RequestMapping(value = "/api/user/register", method = RequestMethod.POST)
