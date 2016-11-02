@@ -23,7 +23,7 @@ public class UserFeedBackController {
     @ApiOperation(httpMethod = "POST", value = "用户反馈",position = 1,nickname = "用户反馈", notes = "" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr>" +
-            "<tr><td>flag</td><td>否</td><td>来源：ios请传递iOS，android请传递android</td></tr>" +
+            "<tr><td>flag</td><td>否</td><td>来源：ios请传递iOS，android请传递Android</td></tr>" +
             "<tr><td>content</td><td>否</td><td>反馈内容</td></tr></table>" +
             "<h4>返回结果</h4>" +
             "<h4>token无效</h4>" +
