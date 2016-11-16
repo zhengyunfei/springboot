@@ -41,7 +41,8 @@ public class FundController {
             "<tr><td>toRaise</td><td>已募集金额</td></tr>" +
             "<tr><td>rateStatus</td><td>募集状态:0募集结束1正在募集中</td></tr>" +
             "<tr><td>desc</td><td>简介</td></tr>" +
-            "<tr><td>fundByname</td><td>标题</td></tr>" +
+            "<tr><td>fundByname</td><td>简称</td></tr>" +
+            "<tr><td>fundName</td><td>名称</td></tr>" +
             "<tr><td>rate</td><td>募集进度</td></tr>" +
             "<table></code></pre></div>")
     @ResponseBody
@@ -70,6 +71,7 @@ public class FundController {
               "        \"recommended\":\"资源整合\",\n" +
               "        \"fundId\":\"deeb77c9-fff1-4092-9de7-a4b2de04b00a\",\n" +
               "        \"fundByname\":\"TMT+大消费产业基金\",\n" +
+              "        \"fundName\":\"TMT+大消费产业基金\",\n" +
               "        \"rate\":65\n" +
               "    },\n" +
               "    \"code\":0\n" +
