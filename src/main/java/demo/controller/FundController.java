@@ -44,6 +44,7 @@ public class FundController {
             "<tr><td>fundByname</td><td>简称</td></tr>" +
             "<tr><td>fundName</td><td>名称</td></tr>" +
             "<tr><td>rate</td><td>募集进度</td></tr>" +
+            "<tr><td>investmentField</td><td>投资领域</td></tr>" +
             "<table></code></pre></div>")
     @ResponseBody
     @RequestMapping(value = "/api/fund/findById", method = RequestMethod.GET)
@@ -72,6 +73,7 @@ public class FundController {
               "        \"fundId\":\"deeb77c9-fff1-4092-9de7-a4b2de04b00a\",\n" +
               "        \"fundByname\":\"TMT+大消费产业基金\",\n" +
               "        \"fundName\":\"TMT+大消费产业基金\",\n" +
+              "        \"investmentField\":\"TMT,大消费产业基金\",\n" +
               "        \"rate\":65\n" +
               "    },\n" +
               "    \"code\":0\n" +

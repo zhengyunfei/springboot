@@ -37,7 +37,7 @@ public class SwaggerConfig {
 	private ApiInfo apiInfo() {
 		ApiInfo apiInfo = new ApiInfo(
 				"财富街APP开发接口API文档",
-				"测试环境url前缀:http://172.168.7.10:8090；<br>"
+				"测试环境url前缀:http://172.168.11.8:8090<br>"
 						+ "<br>",
 				null, null, null, null);
 		return apiInfo;

@@ -72,12 +72,34 @@ public class ResultStatusController {
 
             "</code></pre></div>"
     )
-    @RequestMapping(value = "/api/result/status", method = RequestMethod.POST)
+    @RequestMapping(value = "/api/status", method = RequestMethod.POST)
+    @ResponseBody
+    public Object rule(){
+        String myJsonData="";
+        return myJsonData;
+    }
+    @ApiOperation(httpMethod = "POST", value = "系统正则表达式",position = 1,nickname = "正则表达式", notes = "" +
+            "<h4>系统返回状态</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "\"[\\u4e00-\\u9fa5\\\\w]+\";//验证格式：数字、字母、中文\n" +
+            "\"\\\\w{3,20}\";//验证格式：用户名3-20位字母或数字\n" +
+            "\"\\\\w{6,16}\";//验证格式：密码6-16位字母或数字\n" +
+            "\"^[1][3,4,5,7,8][0-9]{9}$\";//验证格式：手机号码验证\n" +
+            "\"(([\\\\u4E00-\\\\u9FA5]{1,15})|([a-zA-Z]{2,30})|([[a-zA-Z]\\\\u4E00-\\\\u9FA5]{2,30}))\";//验证格式：1-30个字符或汉字\n" +
+            "\"(([\\\\u4E00-\\\\u9FA5]{1,30})|([a-zA-Z]{2,60})|([[a-zA-Z]\\\\u4E00-\\\\u9FA5]{2,60}))\";//验证格式：2-60个字符或者汉字\n" +
+            "\"\\\\w+([-+.]\\\\w+)*@\\\\w+([-.]\\\\w+)*\\\\.\\\\w+([-.]\\\\w+)*\";\t//验证格式：邮箱格式\n" +
+            "\"[1-9][0-9]{5}\";//验证格式：邮编格式\n" +
+            "\"[男|女]\";\n" +
+            "\"(([\\\\u4E00-\\\\u9FA5]{1,30})|([a-zA-Z]{2,60})|([[a-zA-Z]\\\\u4E00-\\\\u9FA5]{2,60}))\";//校验格式：2-60字符或者汉字\n" +
+            "\"\\\\d{4}-\\\\d{2}-\\\\d{2}\";//日期格式校验 年-月-日的形式\n" +
+            "\"\\\\d{4}-\\\\d{2}-\\\\d{2} \\\\d{2}:\\\\d{2}:\\\\d{2}\";//日期格式校验 年-月-日的形式"+
+
+            "</code></pre></div>"
+    )
+    @RequestMapping(value = "/api/rule", method = RequestMethod.POST)
     @ResponseBody
     public Object investor(){
         String myJsonData="";
         return myJsonData;
     }
-
-
 }
