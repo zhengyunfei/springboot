@@ -64,7 +64,7 @@ public class ResultStatusController {
             "    UPLOAD_IMAGE_NAME_ERROR(1037, \"图片上传name参数传递错误\"),\n" +
             "    USER_ACCOUNT_DONG_JIE(1038, \"您的账户已被冻结，请联系客服人员\"),\n" +
             "    ORG_DUTYPERSON_CARD_URL(1039, \"请上传机构负责人名片\"),\n" +
-            "    ORG_LICENSE_URL(1040, \"请山川机构营业执照\"),\n" +
+            "    ORG_LICENSE_URL(1040, \"请上传机构营业执照\"),\n" +
             "    IMAGE_CODE_NOT_NULL(1041, \"请填写图形验证码\"),\n" +
             "    AUTH_ERROR(1042, \"凭证无效\"),\n" +
             "    ILLEGAL_OPTION_ERROR(1043, \"非法操作\");"+

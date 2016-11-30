@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.*;
 public class FundController {
     @Autowired
     UserMapper userMapper;
-
-
     @ApiOperation(httpMethod = "GET", value = "1：基金详情(<font color='blue'>release</font>)",position = 3,notes = "接口地址:/api/fund/findById<br>请求参数:<br>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code><table>" +
             "<th >参数</th><th>参数名称</th><th>是否为空</th><th>备注</th>" +
@@ -85,6 +83,68 @@ public class FundController {
     @ResponseBody
     @RequestMapping(value = "/api/fund/detail", method = RequestMethod.GET)
     public String detailMore(@RequestParam String id) {
+        return "";
+    }
+
+    @ApiOperation(httpMethod = "POST", value = "3：募集结束点击更多(<font color='blue'>release</font>)",position = 2,notes = "<h4>传递参数</h4>" +
+             "<div class=\"block response_body json\"><pre class=\"json\"><code><table>" +
+            "<th >参数</th><th>参数名称</th><th>是否为空</th><th>备注</th>" +
+            "<tr><td >id</td>" + "<td>pageNow</td><td>是</td><td>当前页码</td></tr>" +
+            "<tr><td >id</td>" + "<td>pageSize</td><td>是</td><td>每页显示条数</td></tr>" +
+            "<table></code></pre></div>"+
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>" +
+            "<h4>有数据时返回数据参考</h4>"+
+            "{\n" +
+            "    \"data\": {\n" +
+            "        \"RAISE_END\": [{\n" +
+            "            \"fundId\": \"28e306c8-b617-4129-829b-4b4e7730f3c8\",\n" +
+            "            \"fundByname\": \"人民币专项投资组合基金\",\n" +
+            "            \"fundName\": \"清科人民币专项投资组合基金\",\n" +
+            "            \"url\": \"http://www.pestreet.cn/c/freemarker/upload/img/20150924/2015092414441320150924(2).jpg\",\n" +
+            "            \"rate\": 100,\n" +
+            "            \"capitalContribution\": \"500万\",\n" +
+            "            \"recommended\": \"收益稳定\",\n" +
+            "            \"desc\": \"组合投资优秀的VC/PE基金，降低风险，保障收益\",\n" +
+            "            \"rateStatus\": 0,\n" +
+            "            \"duration\": \"1+7\",\n" +
+            "            \"fundSize\": \"1亿\",\n" +
+            "            \"remainingDays\": 311,\n" +
+            "            \"expectedReturn\": null\n" +
+            "        },\n" +
+            "        {\n" +
+            "            \"fundId\": \"b4c214c5-f18d-4235-b399-20cdca505542\",\n" +
+            "            \"fundByname\": \"A股上市公司人民币定增基金\",\n" +
+            "            \"fundName\": \"清科昊渤A股上市公司定增基金\",\n" +
+            "            \"url\": \"http://www.pestreet.cn/c/freemarker/upload/img/20160517/20160517142801rjejrlr.jpg\",\n" +
+            "            \"rate\": 100,\n" +
+            "            \"capitalContribution\": \"500万\",\n" +
+            "            \"recommended\": \"优质资产装入\",\n" +
+            "            \"desc\": \"股票天然折价，未来有较大上升空间\",\n" +
+            "            \"rateStatus\": 0,\n" +
+            "            \"duration\": \"1.5+1\",\n" +
+            "            \"fundSize\": \"1亿\",\n" +
+            "            \"remainingDays\": 20,\n" +
+            "            \"expectedReturn\": null\n" +
+            "        }]\n" +
+            "    },\n" +
+            "    \"code\": 0,\n" +
+            "    \"msg\": \"\"\n" +
+            "}" +
+            "</code></pre></div>"+
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>" +
+            "<h4>无数据时返回数据参考</h4>"+
+           "{\n" +
+            "    \"data\": {\n" +
+            "        \"RAISE_END\": []\n" +
+            "    },\n" +
+            "    \"code\": 1059,\n" +
+            "    \"msg\": \"没有更多数据了\"\n" +
+            "}"+
+            "</code></pre></div>")
+
+    @ResponseBody
+    @RequestMapping(value = "/api/fund/raiseds", method = RequestMethod.POST)
+    public String raisedMore(@RequestParam int pageNow,@RequestParam int pageSize) {
         return "";
     }
 }

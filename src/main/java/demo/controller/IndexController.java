@@ -30,6 +30,10 @@ public class IndexController {
             "            \"fundByname\": \"简称\",\n" +
             "            \"incomeDistribution\": \"收益分配\",\n" +
             "            \"rateStatus\": \"募集状态（0募集中1募集结束）\",\n" +
+            "            \"fundSize\": \"募集规模\",\n" +
+            "            \"duration\": \"投资周期\",\n" +
+            "            \"remainingDays\": \"剩余天数\",\n" +
+            "            \"expectedReturn\": \"过往收益参考\",\n" +
             "            \"rate\": \"融资进度\"}")
     @RequestMapping(value = "/api/fund/list", method = RequestMethod.GET)
     @ResponseBody
