@@ -221,6 +221,39 @@ public Object isExsitNews(@RequestParam String token,@RequestParam String lastTi
 
             "</code></pre></div>"
     )
+    @RequestMapping(value = "/api/hb/get", method = RequestMethod.POST)
+    @ResponseBody
+    public Object hbget(){
+        String myJsonData="";
+        return myJsonData;
+    }
+
+    @ApiOperation(httpMethod = "POST", value = "4:获取当前正在上架的活动--其他活动",position = 4,nickname = "获取当前正在上架的活动-其他活动", notes = "" +
+            "<h4>没有正在上架的活动时返回</h4>" +
+
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\n" +
+            "    \"code\": 0, \n" +
+            "    \"message\": \"成功\", \n" +
+            "    \"data\": null\n" +
+            "}" +
+            "</code></pre></div>"+
+
+            "<h4>返回结果集</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\n" +
+            "    \"code\": 0, \n" +
+            "    \"message\": \"成功\", \n" +
+            "    \"data\": {\n" +
+            "        \"id\": \"123456789\", \n" +
+            "        \"name\": \"APP专享新人注册大礼\", \n" +
+            "        \"url\": \"http://www.pestreet.cn/c/freemarker/upload/img/20161116/20161116174027rdd.png\", \n" +
+            "        \"money\": 10000\n" +
+            "    }\n" +
+            "}" +
+
+            "</code></pre></div>"
+    )
     @RequestMapping(value = "/api/hd/get", method = RequestMethod.POST)
     @ResponseBody
     public Object hdget(){
