@@ -198,6 +198,7 @@ public Object isExsitNews(@RequestParam String token,@RequestParam String lastTi
 
     @ApiOperation(httpMethod = "POST", value = "4:获取当前正在上架的活动--注册送红包活动",position = 4,nickname = "获取当前正在上架的活动-注册送红包活动", notes = "" +
             "<h4>没有正在上架的活动时返回</h4>" +
+            "pic:图片地址；url：点击图片跳转的连接地址" +
 
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
             "{\n" +
@@ -214,7 +215,8 @@ public Object isExsitNews(@RequestParam String token,@RequestParam String lastTi
             "    \"message\": \"成功\", \n" +
             "    \"data\": {\n" +
             "        \"name\": \"APP专享新人注册大礼\", \n" +
-            "        \"url\": \"http://www.pestreet.cn/c/freemarker/upload/img/20161116/20161116174027rdd.png\", \n" +
+            "        \"pic\": \"http://www.pestreet.cn/c/freemarker/upload/img/20161116/20161116174027rdd.png\", \n" +
+            "        \"url\": \"http://www.pestreet.cn/api/h5/hb\", \n" +
             "        \"money\": 10000\n" +
             "    }\n" +
             "}" +
@@ -229,8 +231,8 @@ public Object isExsitNews(@RequestParam String token,@RequestParam String lastTi
     }
 
     @ApiOperation(httpMethod = "POST", value = "4:获取当前正在上架的活动--其他活动",position = 4,nickname = "获取当前正在上架的活动-其他活动", notes = "" +
+            "pic:图片地址；url：点击图片跳转的连接地址" +
             "<h4>没有正在上架的活动时返回</h4>" +
-
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
             "{\n" +
             "    \"code\": 0, \n" +
@@ -247,7 +249,8 @@ public Object isExsitNews(@RequestParam String token,@RequestParam String lastTi
             "    \"data\": {\n" +
             "        \"id\": \"123456789\", \n" +
             "        \"name\": \"APP专享新人注册大礼\", \n" +
-            "        \"url\": \"http://www.pestreet.cn/c/freemarker/upload/img/20161116/20161116174027rdd.png\", \n" +
+            "        \"pic\": \"http://www.pestreet.cn/c/freemarker/upload/img/20161116/20161116174027rdd.png\", \n" +
+            "        \"url\": \"http://www.pestreet.cn/api/h5/hb\", \n" +
             "        \"money\": 10000\n" +
             "    }\n" +
             "}" +
@@ -316,4 +319,16 @@ public Object isExsitNews(@RequestParam String token,@RequestParam String lastTi
 
 
     /***********************************************我的优惠券*****************************************************************/
+
+
+    /************************************************ 红包api/h5/hb**********************************************************************/
+    @ApiOperation(httpMethod = "POST", value = "7:红包页面",position = 4,nickname = "红包页面", notes = "" +
+            "<h4>通过alert('goToLogin')跳转到登陆注册页面</h4>"
+    )
+    @RequestMapping(value = "/api/h5/hb", method = RequestMethod.GET)
+    @ResponseBody
+    public Object hbPage(){
+        String myJsonData="";
+        return myJsonData;
+    }
 }

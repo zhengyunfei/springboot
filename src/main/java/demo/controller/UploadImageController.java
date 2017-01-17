@@ -39,6 +39,25 @@ public class UploadImageController {
         String myJsonData="";
         return myJsonData;
     }
+    @ApiOperation(httpMethod = "POST", value = "wap版上传头像",position = 1,nickname = "wap版上传头像", notes = "" +
+            "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
+            "<tr><td>token</td><td>否</td><td>token</td></tr></table>" +
+            "<h4>返回结果</h4>" +
+            "<h4>token无效</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\"code\":1005,\"message\":\"token无效\",\"data\":null}" +
+            "</code></pre></div>"+
+            "<h4>成功</h4>"+
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\"code\":0,\"message\":\"成功\",\"data\":null}"+
+            "</code></pre></div>"
+    )
+   @RequestMapping(value = "/api/h5/upload/headPic", method = RequestMethod.POST)
+    @ResponseBody
+    public Object h5uploadHeadUrl(@RequestParam String token,@RequestParam String headUrl){
+        String myJsonData="";
+        return myJsonData;
+    }
 
 
 
@@ -60,5 +79,22 @@ public class UploadImageController {
         String myJsonData="";
         return myJsonData;
     }
-
+    @ApiOperation(httpMethod = "POST", value = "wap版上传图片通用接口",position = 1,nickname = "wap版上传图片通用接口", notes = "" +
+            "<h4>此接口适用于如下几种类型的图片上传</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>1:个人用户名片上传:需要将成功返回的value赋值与userCardUrl</br>" +
+            "2：个人用户身份证上传:需要将成功返回的value赋值与idCardUrl</br>" +
+            "3：机构用户名片上传:需要将成功返回的value赋值与orgDutypersonCardurl</br>" +
+            "4：机构用户营业执照上传:需要将成功返回的value赋值与orgLicenseUrl</br>" +
+            "</code></pre></div>"+
+            "<h4>成功</h4>"+
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\"code\":0,\"message\":\"成功\",\"data\":{'key':'value'}}"+
+            "</code></pre></div>"
+    )
+    @RequestMapping(value = "/api/html5/upload.html", method = RequestMethod.POST)
+    @ResponseBody
+    public Object wapUpload(){
+        String myJsonData="";
+        return myJsonData;
+    }
 }

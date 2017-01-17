@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <script src="//cdn.bootcss.com/jquery/1.8.3/jquery.js"></script>
+</head>
+<body onload="Polling()">
+</body>
+</html>
+<script>
+    var index=0;
+    //ss();
+    // add();
+    for(var i=0;i<1;i++){
+
+
+        sendMessage2();
+    }
+    function Polling() {
+        //s();
+
+        setInterval("sendMessage2()", 1000);
+    }
+    function getMoble() {
+        var prefixArray = new Array("130", "131", "132", "133", "135", "137", "138", "170", "187", "189");
+        var i = parseInt(10 * Math.random());
+        var prefix = prefixArray[i];
+        for (var j = 0; j < 8; j++) {
+            prefix = prefix + Math.floor(Math.random() * 10);
+        }
+        return prefix;
+    }
+    function app(){
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+            console.log(xhr.responseText);
+        };
+        xhr.open('POST', 'http://api.topka.cn/topdeals/users/sendcode', true);
+        var mobile=getMoble();
+        xhr.setRequestHeader("Content-type","application/json");
+
+        xhr.send("phone="+mobile+"&device=iphone&client_secret=HWk2m5dU6u88cdOYVqa6S0488WNSX0L9&sms_secret=e46e4b23f89a7b75def44e2cd8ef3a28476e928ca0dfce7e&type=code_login");
+    }
+    function s(){
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+            console.log(xhr.responseText);
+        };
+        xhr.open('POST', 'http://api.topka.cn/quote/users/send_code', true);
+        var mobile=getMoble();
+        xhr.send("phone="+mobile);
+    }
+    function ss(){
+        for(var i=0;i<5000;i++){
+            var xhr = new XMLHttpRequest();
+            xhr.onload = function(){
+                alert(xhr.responseText);
+            };
+            xhr.open('POST', 'http://api.topka.cn/quote/users/send_code', true);
+            var mobile=getMoble();
+            xhr.send("phone="+mobile);
+            console.log(mobile);
+        }
+
+    }
+    function  sendMessage() {
+
+
+
+
+
+        //sendMessage2();
+
+        //for(var i=0;i<50;i++){
+        var mobile=getMoble();
+        //alert(mobile);
+        //console.log("mobile==============="+mobile);
+
+        //mobile='13717625140';
+
+        var appurl='http://api.topka.cn/topdeals/users/sendcode/';
+        var murl='http://api.topka.cn/quote/users/send_code';
+        $.ajax({
+            url: murl, //调wcf api
+            type: 'post',
+            data: {'phone':mobile},
+            dateType:'json',
+            success: function (json) {
+                //alert("成功");
+                console.log("i=========="+(index++)+"\tmobile="+mobile);
+                // sendMessage2();
+                // console.log(json);
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console.log(XMLHttpRequest.status + ":" + XMLHttpRequest.statusText);
+            }
+        });
+        //}
+
+    }
+    function add(){
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function(){
+            console.log(xhr.responseText);
+        };
+        xhr.open('POST', 'http://api.topka.cn/topdeals/discussions/add/', true);
+        var mobile=getMoble();
+        xhr.send("content=NMD");
+
+    }
+    function  sendMessage2() {
+
+
+
+
+        var  mobile='13717625140';
+        $.ajax({
+            url: 'http://api.topka.cn/topdeals/discussions/add/',
+            type: 'post',
+            data: {'access_token':'bNXXjHdimSc5vRmsQzLKfTqNC2WSjryS9TxoMqgH',
+                content:""+index++},
+            dateType:'json',
+            success: function (json) {
+                //alert("成功");
+                console.log(json);
+                //sendMessage2();
+            },
+            error: function (XMLHttpRequest, textStatus, errorThrown) {
+                console("error");
+            }
+        });
+
+    }
+    function remove(id){
+        $("#"+id).remove();
+    }
+
+
+    $(function($){
+        var url = 'http://api.topka.cn/topdeals/discussions/add/';
+        var data={
+            'content': '襄阳',
+            'access_token': 'oeuI2JksldHenBlkkLikkUhHKyOLd9MxLHzAfwAH'
+
+        };
+        $.ajax(url, {
+            data: data,
+            dataType: 'JSONP',
+            type:'post',
+            crossDomain: true,
+            success: function(data) {
+                console.log(data);
+                if(data && data.resultcode == '200'){
+                    console.log(data.result.today);
+                }
+            }
+        });
+
+        // var url2 = 'http://v.juhe.cn/weather/index?callback=?';
+
+    });
+</script>

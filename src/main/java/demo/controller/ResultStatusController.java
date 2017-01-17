@@ -23,7 +23,7 @@ public class ResultStatusController {
     @ApiOperation(httpMethod = "POST", value = "系统返回状态",position = 1,nickname = "系统返回状态", notes = "" +
             "<h4>系统返回状态</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
-             "    SUCCESS(0, \"成功\"),\n" +
+            " SUCCESS(0, \"成功\"),\n" +
             "    USERNAME_OR_PASSWORD_ERROR(1001, \"手机号或密码错误\"),\n" +
             "    USER_NOT_FOUND(1002, \"用户不存在\"),\n" +
             "    USER_NOT_LOGIN(1003, \"用户未登录\"),\n" +
@@ -31,17 +31,17 @@ public class ResultStatusController {
             "    TOKEN_ERROR(1005, \"登录失效，请重新登录\"),\n" +
             "    NOT_FOUND(404, \"NOT FOUND\"),\n" +
             "    PARAM_IS_NOT_NULL(1006, \"PARAM IS NOT NULL\"),\n" +
-            "    PASSWORD_REG(1007, \"密码格式错误,正确格式6-16位字母或数字\"),\n" +
+            "    PASSWORD_REG(1007, \"请设置6-16位数字或字母组成的密码\"),\n" +
             "    CODE_ERROR(1008, \"验证码错误\"),\n" +
             "    MOBEILE_SEND_CODE_ERROR(1009, \"您的操作过于频繁，请明天再试\"),\n" +
             "    MOBEILE_TEST_SEND_CODE_ERROR(1010, \"该手机号码为测试手机号码,不用发送验证码\"),\n" +
             "    IMAGE_CODE_ERROR(1011, \"图形验证码错误\"),\n" +
             "    CODE_COUNT_ERROR(1012, \"验证码输入次数超过3次\"),\n" +
-            "    USER_NAME_ERROR(1013, \"用户名错误，请填写3-20位字母或数字\"),\n" +
+            "    USER_NAME_ERROR(1013, \"真实姓名错误\"),\n" +
             "    EMAILFMT_ERROR(1014, \"邮箱格式错误\"),\n" +
             "    IDCARD_ERROR(1015, \"身份证格式错误\"),\n" +
-            "    COMPANY_ERROR(1016, \"公司格式错误,请填写1-50位数字、字母或中文\"),\n" +
-            "    POSITION_ERROR(1017, \"职位格式错误,请填写1-50位数字、字母或中文\"),\n" +
+            "    COMPANY_ERROR(1016, \"所在公司填写错误\"),\n" +
+            "    POSITION_ERROR(1017, \"职位填写错误\"),\n" +
             "    ASSEST_ERROR(1018, \"请选择金融资产量\"),\n" +
             "    ARPM_ERROR(1019, \"请选择近三年平均收入\"),\n" +
             "    IDCARD_PHOTO_ERROR(1020, \"请上传身份证照片\"),\n" +
@@ -53,21 +53,40 @@ public class ResultStatusController {
             "    EXSIT_USER_ERROR(1026, \"该手机号已经注册\"),\n" +
             "    UPDATE_PASSWORD_SUCCCESS(1027, \"密码更新成功\"),\n" +
             "    UPLOAD_IMAGE_ERROR(1028, \"请上传图片\"),\n" +
-            "    ORG_NAME_ERROR(1029, \"机构名称填写错误,请填写1-50数字、字母、中文\"),\n" +
-            "    ORG_DUTYPERSON_NAME_ERROR(1030, \"机构负责人名称填写错误,请填写1-50数字、字母、中文\"),\n" +
-            "    ORG_DUTYPERSON_POSITION_ERROR(1031, \"机构负责人名称填写错误,请填写1-50数字、字母、中文\"),\n" +
+            "    ORG_NAME_ERROR(1029, \"机构名称填写错误\"),\n" +
+            "    ORG_DUTYPERSON_NAME_ERROR(1030, \"机构负责人姓名填写错误\"),\n" +
+            "    ORG_DUTYPERSON_POSITION_ERROR(1031, \"机构负责人职位填写错误\"),\n" +
             "    ORG_DUTYPERSON_EMAIL_ERROR(1032, \"机构负责人邮箱填写错误\"),\n" +
             "    DATE_FORMAT_ERROR(1033, \"日期格式错误\"),\n" +
             "    NOT_FIND_FUND_ERROR(1034, \"您预约的产品不存在，请刷新页面或联系客服人员\"),\n" +
             "    ERROR(1035, \"服务器错误\"),\n" +
             "    FEED_BACK_ERROR(1036, \"反馈内容不能为空\"),\n" +
             "    UPLOAD_IMAGE_NAME_ERROR(1037, \"图片上传name参数传递错误\"),\n" +
-            "    USER_ACCOUNT_DONG_JIE(1038, \"您的账户已被冻结，请联系客服人员\"),\n" +
+            "    USER_ACCOUNT_DONG_JIE(1038, \"您的账户已被冻结\\n如有疑问请联系客服400-6547-828\"),\n" +
             "    ORG_DUTYPERSON_CARD_URL(1039, \"请上传机构负责人名片\"),\n" +
             "    ORG_LICENSE_URL(1040, \"请上传机构营业执照\"),\n" +
             "    IMAGE_CODE_NOT_NULL(1041, \"请填写图形验证码\"),\n" +
             "    AUTH_ERROR(1042, \"凭证无效\"),\n" +
-            "    ILLEGAL_OPTION_ERROR(1043, \"非法操作\");"+
+            "    ILLEGAL_OPTION_ERROR(1043, \"非法操作\"),\n" +
+            "    SEX_NOTNULL_ERROR(1044, \"请选择性别\"),\n" +
+            "    CODE_SEND_SUCCESS(1045, \"验证码发送成功\"),\n" +
+            "    DATA_SUBMISSION_SUCCESS(1046, \"提交成功！\\n\\n我们将在1~2个工作日内与您取得联系\"),\n" +
+            "    PRE_SUCCESS(1047, \"预约成功！\\n\\n我们会尽快联系您\"),\n" +
+            "    IDCARD_EXSIT_ERROR(1048, \"此身份证号已被占用\"),\n" +
+            "    USER_NAME_ISNULL_ERROR(1049, \"请填写真实姓名\"),\n" +
+            "    EMAILFMT_ISNULL_ERROR(1050, \"请填写邮箱\"),\n" +
+            "    IDCARD_ISNULL_ERROR(1051, \"请填写身份证号码\"),\n" +
+            "    COMPANY_ISNULL_ERROR(1052, \"请填写所在公司\"),\n" +
+            "    POSITION_ISNULL_ERROR(1053, \"请填写职位\"),\n" +
+            "    ORG_NAME_ISNULL_ERROR(1054, \"请填写机构名称\"),\n" +
+            "    ORG_DUTYPERSON_NAME_ISNULL_ERROR(1055, \"请填写机构负责人姓名\"),\n" +
+            "    ORG_DUTYPERSON_POSITION_ISNULL_ERROR(1056, \"请填写机构负责人职位\"),\n" +
+            "    ORG_DUTYPERSON_EMAIL_ISNULL_ERROR(1057, \"请填写机构负责人邮箱\"),\n" +
+            "    OTHER_PHONE_LOGIN_ERROR(1058, \"登陆失效,您的账号已在其他设备上登陆\"),\n" +
+            "    NO_MORE(1059, \"没有更多数据了\"),\n" +
+            "    REGISTER_STEP_ERROR(1060, \"\"),\n" +
+            "    PT_CONTENT_ERROR(1061, \"请填写私人定制内容\"),\n" +
+            "    PT_CONTENT_MORE_ERROR(1061, \"私人定制内容字数过多\");"+
 
 
             "</code></pre></div>"
