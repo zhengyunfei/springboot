@@ -27,7 +27,8 @@ public class TokenUserInfoController {
             "<div class=\"block response_body json\"><pre class=\"json\"><code>{\n\"message\":\"token无效\",\n\"data\":\"[]\",\n\"code\":1005\n}</code></pre></div>"+
             "<h4>成功时返回:</h4>"+
             "<div class=\"block response_body json\"><pre class=\"json\"><code>" +
-            "{\r\"code\":0,\n\"message\":\"成功\",\n\"data\":{\n\"userName\":\"令狐冲\",\n\"mobile\":\"13717625140\",\n\"userStatus\":0,\n\"userRegisterStep\":4,\r\"headUrl\":\"\",\r\"idMark\":0}}"+
+            "{\r\"code\":0,\n\"message\":\"成功\",\n\"data\":{\n\"userName\":\"令狐冲\",\n\"mobile\":\"13717625140\",\n\"userStatus\":0,\n\"userRegisterStep\":4,\r\"headUrl\":\"\",\r\"idMark\":0,\n" +
+            "\"yqmCode\":15W5s6}}"+
             "</code></pre></div>"+
             "<h4>用户状态解析:</h4>"+
             "<div class=\"block response_body json\"><pre class=\"html\"><code>userStatus:0信息未完善1审核中2审核通过3审核不通过4冻结</code></pre></div>"+
