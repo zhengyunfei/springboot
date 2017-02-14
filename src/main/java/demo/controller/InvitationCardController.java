@@ -19,7 +19,9 @@ public class InvitationCardController {
     @Autowired
     UserMapper userMapper;
     @ApiOperation(httpMethod = "POST", value = "1：获取邀请卡列表(<font color='blue'>release</font>)",position = 3,notes = "接口地址:/api/invitationCard/list<br>" +
-            "<h4>友情提示，/api/user/getStepAndStatus此接口新增返回结果字段yqmCode:邀请码</h4>" +
+            "<h4><font color='red'>友情提示1，<a href='http://172.168.18.63:8080/debug/index.html#!/4:根据token获取个人或者机构基本信息api接口/getUserStepAndStatus'>/api/user/getStepAndStatus</a>此接口新增返回结果字段yqmCode:邀请码</font></h4>" +
+            "<h4><font color='red'>友情提示2，<a href='http://172.168.18.63:8080/debug/index.html#!/3:用户注册api接口/getCode'>/api/user/register</a>此接口新增参数传递字段yqmCode:邀请码</font></h4>" +
+            "<h4>分享链接为http://172.168.11.8:8090/newPhone/shareInvestors.html?yqmCode=123456?yqmCode=123456,此链接暂时为测试环境地址链接，正式环境链接待定,h5需要根据此链接传递的参数yqmCode传递到注册/api/user/register接口中</h4>" +
             "<h4>字段解析:</h4>" +
             "1:pic 图片<br>" +
             "2:name 名称<br>" +
@@ -27,6 +29,7 @@ public class InvitationCardController {
             "4:content 内容<br>" +
             "5:thumbnail 缩略图<br>" +
             "6:type 0 默认 1 其他<br>" +
+            "<font color='red'>默认查询出来的第一条数据是默认的邀请卡</font>" +
             "<h4>数据集返回结果:</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
             "{\n" +
@@ -128,5 +131,122 @@ public String delete() {
     String returnMsg="";
     return returnMsg;
 }
-
+    /**********************************我的邀请*********************************************************/
+    @ApiOperation(httpMethod = "POST", value = "4：我的邀请(<font color='blue'>release</font>)",position = 4,notes = "接口地址:/api/my/invitation/list<br>" +
+            "<h4>传递参数:</h4>" +
+            "1:token token 必传<br>" +
+            "2:pageNow pageNow 当前页码 选填<br>" +
+            "3:pageSize pageSize 每页显示条数 选填<br>" +
+            "<h4>数据集返回结果:isReturn 0待返 1 已返</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\n" +
+            "    \"code\": 0, \n" +
+            "    \"message\": \"成功\", \n" +
+            "    \"data\": [\n" +
+            "        {\n" +
+            "            \"registerUser\": \"王艳林\", \n" +
+            "            \"jp\": \"优质投资机会\", \n" +
+            "            \"isReturn\": 0\n" +
+            "        }, \n" +
+            "        {\n" +
+            "            \"registerUser\": \"王健林\", \n" +
+            "            \"jp\": \"50000元投资券\", \n" +
+            "            \"isReturn\": 0\n" +
+            "        }, \n" +
+            "        {\n" +
+            "            \"registerUser\": \"王思聪\", \n" +
+            "            \"jp\": \"20000元投资券\", \n" +
+            "            \"isReturn\": 1\n" +
+            "        }\n" +
+            "    ]\n" +
+            "}"+
+            "</code></pre></div>" +
+            "")
+    @RequestMapping(value = "/api/my/invitation/list", method = RequestMethod.POST)
+    @ResponseBody
+    public String myInvitationList() {
+        String returnMsg="";
+        return returnMsg;
+    }
+    /**********************************我的卡券-》投资券*********************************************************/
+    @ApiOperation(httpMethod = "POST", value = "5：我的卡券-》投资券(<font color='blue'>release</font>)",position = 5,notes = "接口地址:/api/my/card/list<br>" +
+            "<h4>传递参数:</h4>" +
+            "1:token token 必传<br>" +
+            "2:pageNow pageNow 当前页码 选填<br>" +
+            "3:pageSize pageSize 每页显示条数 选填<br>" +
+            "<h4>数据集返回结果-为空时:</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\n" +
+            "    \"code\": 0, \n" +
+            "    \"message\": \"成功\", \n" +
+            "    \"data\": {\n" +
+            "        \"tzqCount\": 0, \n" +
+            "        \"qioCount\": 0\n" +
+            "    }\n" +
+            "}"+
+            "</code></pre></div>" +
+            "<h4>数据集返回结果-有结果:</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\n" +
+            "    \"code\": 0, \n" +
+            "    \"message\": \"成功\", \n" +
+            "    \"data\": {\n" +
+            "        \"tzqCount\": 2, \n" +
+            "        \"tzqList\": [\n" +
+            "            {\n" +
+            "                \"title\": \"50000元投资券\", \n" +
+            "                \"status\": 0\n" +
+            "            }, \n" +
+            "            {\n" +
+            "                \"title\": \"20000元投资券\", \n" +
+            "                \"status\": 1\n" +
+            "            }\n" +
+            "        ], \n" +
+            "        \"qioCount\": 1\n" +
+            "    }\n" +
+            "}" +
+            "}"+
+            "</code></pre></div>" +
+            "<h4>部分字段解析:</h4>" +
+            "<div>" +
+            "tzqCount:投资券个数<br>" +
+            "qioCount:优质投资机会个数<br>" +
+            "status:0 未使用 1 已使用<br>" +
+            "</div>" +
+            "")
+    @RequestMapping(value = "/api/my/card/list", method = RequestMethod.POST)
+    @ResponseBody
+    public String myTzqList() {
+        String returnMsg="";
+        return returnMsg;
+    }
+    /**********************************我的卡券-》投资券*********************************************************/
+    @ApiOperation(httpMethod = "POST", value = "6：我的卡券-》优质投资机会(<font color='blue'>release</font>)",position = 5,notes = "接口地址:/api/my/qio/list<br>" +
+            "<h4>传递参数:</h4>" +
+            "1:token token 必传<br>" +
+            "2:pageNow pageNow 当前页码 选填<br>" +
+            "3:pageSize pageSize 每页显示条数 选填<br>" +
+            "<h4>数据集返回结果:</h4>" +
+            "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
+            "{\n" +
+            "    \"code\": 0, \n" +
+            "    \"message\": \"成功\", \n" +
+            "    \"data\": {\n" +
+            "        \"qioList\": [\n" +
+            "            {\n" +
+            "                \"title\": \"优质投资机会\", \n" +
+            "                \"status\": 0\n" +
+            "            }\n" +
+            "        ]\n" +
+            "    }\n" +
+            "}"+
+            "</code></pre></div>" +
+            "<h4>字段解析：status 0 未使用 1 已使用</h4>"+
+            "")
+    @RequestMapping(value = "/api/my/qio/list", method = RequestMethod.POST)
+    @ResponseBody
+    public String myQioList() {
+        String returnMsg="";
+        return returnMsg;
+    }
 }

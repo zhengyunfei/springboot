@@ -23,19 +23,19 @@ public class AnswerController {
     @Autowired
     UserMapper userMapper;
 
-    @ApiOperation(httpMethod = "GET", value = "个人风险评估",position = 1,nickname = "个人风险评估h5", notes = "" +
+    @ApiOperation(httpMethod = "GET", value = "个人风险评估",position = 1,nickname = "个人风险评估h5", notes = "android和ios需要传递source=app" +
             "<h4>个人风险评估h5，直接调url就行</h4>" )
     @RequestMapping(value = "/api/pscore/index", method = RequestMethod.GET)
     @ResponseBody
-    public Object investor(){
+    public Object investor(String source){
         String myJsonData="";
         return myJsonData;
     }
-    @ApiOperation(httpMethod = "GET", value = "机构风险评估h5",position = 2,nickname = "机构风险评估h5", notes = "" +
+    @ApiOperation(httpMethod = "GET", value = "机构风险评估h5",position = 2,nickname = "机构风险评估h5", notes = "android和ios需要传递source=app" +
             "<h4>机构风险评估h5，直接调url就行</h4>" )
     @RequestMapping(value = "/api/scoreOrg/index", method = RequestMethod.GET)
     @ResponseBody
-    public Object agreement(){
+    public Object agreement(String source){
         String myJsonData="";
         return myJsonData;
     }

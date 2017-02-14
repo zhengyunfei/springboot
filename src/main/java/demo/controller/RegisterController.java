@@ -28,6 +28,7 @@ public class RegisterController {
             "<tr><td>password</td><td>密码</td> <td>否</td></tr>" +
             "<tr><td>source</td><td>来源:ios请传递iOS，android请传递Android</td> <td>否</td></tr>" +
             "<tr><td>codeImage</td><td>图形验证码</td> <td>当验证码输入错误三次以后codeImage必填</td></tr>" +
+            "<tr><td>yqmCode</td><td>邀请码</td> <td><font color='red'>是。通过邀请卡分享传递过来邀请码yqmCode-->h5专用</font></td></tr>" +
             "</table>" +
             "<h4>返回字段:</h4>" +
             "<h4>1：当手机号码格式错误的时候:</h4>" +
