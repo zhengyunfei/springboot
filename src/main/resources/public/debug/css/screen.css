@@ -564,10 +564,10 @@
   font-style: italic;
 }
 .swagger-section .swagger-ui-wrap .markdown h3 {
-  color: #547f00;
+  color: deeppink;
 }
 .swagger-section .swagger-ui-wrap .markdown h4 {
-  color: #666666;
+  color: blueviolet;
 }
 .swagger-section .swagger-ui-wrap .markdown pre {
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
@@ -651,7 +651,7 @@
   padding-left: 0;
 }
 .swagger-section .swagger-ui-wrap ul#resources li.resource div.heading h2 {
-  color: #999999;
+  color: green;
   padding-left: 0;
   display: block;
   clear: none;

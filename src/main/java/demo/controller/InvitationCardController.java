@@ -143,6 +143,11 @@ public String delete() {
             "    \"code\": 0, \n" +
             "    \"message\": \"成功\", \n" +
             "    \"data\": [\n" +
+            "       {\n" +
+            "            \"registerUser\": \"137****5140\", \n" +
+            "            \"jp\": \"50000元投资券\", \n" +
+            "            \"isReturn\": 0\n" +
+            "        }, \n" +
             "        {\n" +
             "            \"registerUser\": \"王艳林\", \n" +
             "            \"jp\": \"优质投资机会\", \n" +
@@ -152,7 +157,8 @@ public String delete() {
             "            \"registerUser\": \"王健林\", \n" +
             "            \"jp\": \"50000元投资券\", \n" +
             "            \"isReturn\": 0\n" +
-            "        }, \n" +
+            "        }, \n" + "        " +
+
             "        {\n" +
             "            \"registerUser\": \"王思聪\", \n" +
             "            \"jp\": \"20000元投资券\", \n" +
@@ -161,6 +167,11 @@ public String delete() {
             "    ]\n" +
             "}"+
             "</code></pre></div>" +
+            "<h4>测试数据</h4>" +
+            "<div>" +
+            "账号：13999999994<br>" +
+            "密码：111111" +
+            "</div>" +
             "")
     @RequestMapping(value = "/api/my/invitation/list", method = RequestMethod.POST)
     @ResponseBody
@@ -213,6 +224,11 @@ public String delete() {
             "qioCount:优质投资机会个数<br>" +
             "status:0 未使用 1 已使用<br>" +
             "</div>" +
+            "<h4>测试数据</h4>" +
+            "<div>" +
+            "账号：13999999994<br>" +
+            "密码：111111" +
+            "</div>" +
             "")
     @RequestMapping(value = "/api/my/card/list", method = RequestMethod.POST)
     @ResponseBody
@@ -242,6 +258,11 @@ public String delete() {
             "}"+
             "</code></pre></div>" +
             "<h4>字段解析：status 0 未使用 1 已使用</h4>"+
+            "<h4>测试数据</h4>" +
+            "<div>" +
+            "账号：13999999994<br>" +
+            "密码：111111" +
+            "</div>" +
             "")
     @RequestMapping(value = "/api/my/qio/list", method = RequestMethod.POST)
     @ResponseBody

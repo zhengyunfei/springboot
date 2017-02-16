@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.*;
  * 用户反馈api接口
  */
 @RestController
-@Api(value = "j:财富街app全部接口api", description = "<font color='red'>app2.0接口文档</font>", produces = "application/json",position =1 )
+@Api(value = "j:财富街app全部接口api", description = "app2.0接口文档", produces = "application/json",position =1 )
 public class VersionController {
     @Autowired
     UserMapper userMapper;
