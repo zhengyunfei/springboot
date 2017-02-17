@@ -15,12 +15,17 @@ import org.springframework.web.bind.annotation.*;
  * 用户反馈api接口
  */
 @RestController
-@Api(value = "j:财富街app全部接口api", description = "app2.0接口文档", produces = "application/json",position =1 )
+@Api(value = "j:财富街app全部接口api", description = "app2.0接口文档" +
+        "<img src=\"http://www.51xuediannao.com/uploads/allimg/140104/1-140104201953.gif\">" +
+        "<img src=\"http://www.51xuediannao.com/uploads/allimg/140104/1-140104201953.gif\">" +
+        "<img src=\"http://www.51xuediannao.com/uploads/allimg/140104/1-140104201953.gif\">", produces = "application/json",position =1 )
 public class VersionController {
     @Autowired
     UserMapper userMapper;
 
-    @ApiOperation(httpMethod = "POST", value = "1:站内信列表",position = 1,nickname = "获取所有用户站内信消息", notes = "" +
+    @ApiOperation(httpMethod = "POST", value = "1:消息中心" +
+            "<img src=\"http://www.51xuediannao.com/uploads/allimg/140104/1-140104201934.gif\">" +
+            "<font color='red'></font>",position = 1,nickname = "获取红包消息和优质投资机会消息", notes = "" +
             "<table border=\"1\"><tr><th>字段</th><th>是否为空</th><th>\t备注</th></tr>" +
             "<tr><td>token</td><td>否</td><td>token</td></tr>" +
             "<tr><td>pageSize</td><td>否</td><td>每页显示多少条</td></tr>" +
@@ -33,32 +38,51 @@ public class VersionController {
             "<h4>没有站内信时返回</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
             "{\n" +
-            "    \"data\": {\n" +
-            "        \"list\": [ ]\n" +
-            "    }, \n" +
-            "    \"code\": 0, \n" +
-            "    \"message\": \"成功\"\n" +
+            "    \"code\": 1059, \n" +
+            "    \"message\": \"没有更多数据了\", \n" +
+            "    \"data\": [ ]\n" +
             "}" +
             "</code></pre></div>"+
             "<h4>返回结果集</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
             "{\n" +
+            "    \"code\": 0, \n" +
+            "    \"message\": \"成功\", \n" +
             "    \"data\": {\n" +
+            "        \"lastTime\": \"1487124610\", \n" +
             "        \"list\": [\n" +
             "            {\n" +
-            "                \"title\": \"3条短信又没有\", \n" +
-            "                \"content\": \"有啊\", \n" +
-            "                \"sendTime\": \"1418277173\"\n" +
+            "                \"title\": \"恭喜!您获得20000元投资支持资金\", \n" +
+            "                \"content\": \"亲爱的用户您好，您在“APP专享新人红包活动”中获得了20000元投资支持资金\", \n" +
+            "                \"sendTime\": \"1487124610\", \n" +
+            "                \"flag\": 1\n" +
             "            }, \n" +
             "            {\n" +
-            "                \"title\": \"3条短信又没有\", \n" +
-            "                \"content\": \"有啊\", \n" +
-            "                \"sendTime\": \"1418275553\"\n" +
+            "                \"title\": \"恭喜！您获得1次优质投资机会\", \n" +
+            "                \"content\": \"亲爱的用户您好，您在“邀请好友即享大礼”中获得了1次优质投资机会。\", \n" +
+            "                \"sendTime\": \"1486366333\", \n" +
+            "                \"flag\": 2\n" +
+            "            }, \n" +
+            "            {\n" +
+            "                \"title\": \"恭喜!您获得20000元投资支持资金\", \n" +
+            "                \"content\": \"亲爱的用户您好，您在“邀请好友即享大礼”中获得了1次优质投资机会。\", \n" +
+            "                \"sendTime\": \"1486366333\", \n" +
+            "                \"flag\": 2\n" +
+            "            }, \n" +
+            "            {\n" +
+            "                \"title\": \"恭喜！您获得1次优质投资机会\", \n" +
+            "                \"content\": \"亲爱的用户您好，您在“邀请好友即享大礼”中获得了1次优质投资机会\", \n" +
+            "                \"sendTime\": \"1486366333\", \n" +
+            "                \"flag\": 1\n" +
+            "            }, \n" +
+            "            {\n" +
+            "                \"title\": \"恭喜！您获得1次优质投资机会\", \n" +
+            "                \"content\": \"亲爱的用户您好，您在“邀请好友即享大礼”中获得了1次优质投资机会\", \n" +
+            "                \"sendTime\": \"1486366333\", \n" +
+            "                \"flag\": 2\n" +
             "            }\n" +
             "        ]\n" +
-            "    }, \n" +
-            "    \"code\": 0, \n" +
-            "    \"message\": \"成功\"\n" +
+            "    }\n" +
             "}" +
 
             "</code></pre></div>"

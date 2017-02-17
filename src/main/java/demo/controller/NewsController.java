@@ -16,12 +16,9 @@ import org.springframework.web.bind.annotation.*;
  */
 @RestController
 @Api(value = "d:财富资讯API接口", description = "财富资讯API接口" +
-        "<img src=\"http://www.fuhaodq.com/d/file/xiansheng/2014-07-20/4c9efc3df17137af29e3e81b5124d8c1.jpg\" >" +
-        "<img src=\"http://www.fuhaodq.com/d/file/xiansheng/2014-07-20/4c9efc3df17137af29e3e81b5124d8c1.jpg\" >" +
-        "<img src=\"http://www.fuhaodq.com/d/file/xiansheng/2014-07-20/4c9efc3df17137af29e3e81b5124d8c1.jpg\" >" +
-        "<img src=\"http://www.fuhaodq.com/fhimg/1/bqfh90.png\">" +
-        "<img src=\"http://www.fuhaodq.com/fhimg/1/bqfh90.png\">" +
-        "<img src=\"http://www.fuhaodq.com/fhimg/1/bqfh90.png\"><font color='red'>有更新了。。。</font>", produces = "application/json")
+        "<img src=\"http://www.51xuediannao.com/uploads/allimg/140104/1-140104201953.gif\">" +
+        "<img src=\"http://www.51xuediannao.com/uploads/allimg/140104/1-140104201953.gif\">" +
+        "<img src=\"http://www.51xuediannao.com/uploads/allimg/140104/1-140104201953.gif\">", produces = "application/json")
 public class NewsController {
     @Autowired
     UserMapper userMapper;
@@ -35,7 +32,8 @@ public class NewsController {
         return myJsonData;
     }
 
-    @ApiOperation(httpMethod = "POST", value = "资讯列表",position = 1,nickname = "资讯列表h5", notes = "" +
+    @ApiOperation(httpMethod = "POST", value = "资讯列表" +
+            "<img src=\"http://www.51xuediannao.com/uploads/allimg/140104/1-140104201934.gif\">",position = 1,nickname = "资讯列表h5", notes = "" +
             "<h4>财富资讯url地址：/api/news/list</h4>" +
             "<h4>传递参数</h4>"+
             "<div>" +
