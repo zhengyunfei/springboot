@@ -45,7 +45,6 @@ public class NewsController {
             "type=cfdt 财富动态<br>" +
             "type=cfgs 财富故事<br>" +
             "type=mtbd 媒体报道<br>" +
-            "3:pageSize pageSize 每页显示条数 选填<br>" +
             "<h4>数据集返回结果-为空时:</h4>" +
             "<div class=\"block response_body json\"><pre class=\"json\"><code>"+
             "{\n" +

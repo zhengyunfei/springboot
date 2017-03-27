@@ -21,7 +21,7 @@ public class InvitationCardController {
     @ApiOperation(httpMethod = "POST", value = "1：获取邀请卡列表(<font color='blue'>release</font>)",position = 3,notes = "接口地址:/api/invitationCard/list<br>" +
             "<h4><font color='red'>友情提示1，<a href='http://172.168.18.63:8080/debug/index.html#!/4:根据token获取个人或者机构基本信息api接口/getUserStepAndStatus'>/api/user/getStepAndStatus</a>此接口新增返回结果字段yqmCode:邀请码</font></h4>" +
             "<h4><font color='red'>友情提示2，<a href='http://172.168.18.63:8080/debug/index.html#!/3:用户注册api接口/getCode'>/api/user/register</a>此接口新增参数传递字段yqmCode:邀请码</font></h4>" +
-            "<h4>分享链接为http://172.168.11.8:8090/newPhone/shareInvestors.html?yqmCode=123456?yqmCode=123456,此链接暂时为测试环境地址链接，正式环境链接待定,h5需要根据此链接传递的参数yqmCode传递到注册/api/user/register接口中</h4>" +
+            "<h4>分享链接为http://172.168.11.8:8090/newPhone/shareInvestors.html?yqmCode=123456,此链接暂时为测试环境地址链接，正式环境链接https://www.pestreet.cn/mobile/shareInvestors.html?yqmCode=123456,h5需要根据此链接传递的参数yqmCode传递到注册/api/user/register接口中</h4>" +
             "<h4>字段解析:</h4>" +
             "1:pic 图片<br>" +
             "2:name 名称<br>" +
